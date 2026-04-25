@@ -1,0 +1,93 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  position: relative;
+  color: $colorGray;
+  border: 5px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 30px 40px;
+  border-radius: 50px;
+  font-variant-ligatures: none;
+  font-family: $fontMain;
+  width: 100%;
+  height: 80px;
+
+  @include responsive1699 {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 15px 30px;
+    border-width: 3px;
+    height: 60px;
+  }
+
+  @include responsive1279 {
+    height: 52px;
+    padding: 18px 26px;
+  }
+
+  @include responsive767 {
+    padding: 5px 20px;
+  }
+
+  @include responsive389 {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 16px;
+    height: 42px;
+  }
+
+  &--green {
+    background-color: transparent;
+    border-color: $colorGreen;
+
+    @include hover {
+      background-color: $colorGreen;
+      color: $colorWhite;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+// .btn-download {
+//   font-size: 16px;
+//   font-family: $fontMain;
+//   height: 50px;
+//   border-radius: 12px;
+//   display: flex;
+//   justify-content: center;
+//   gap: 12px;
+//   background-color: $colorBlack-a2;
+//   border-color: transparent;
+//   padding: 0 20px;
+
+//   @include hover {
+//     background-color: $colorOrange;
+//     color: $colorWhite;
+//   }
+
+//   @include before {
+//     position: relative;
+//     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.66669 18.3337H18.3334M10 12.0837V1.66699M10 12.0837L14.1667 7.91699M10 12.0837L5.83335 7.91699' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+//     background-position: left center;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     width: 16px;
+//     height: 16px;
+//   }
+// }
