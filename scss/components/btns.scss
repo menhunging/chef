@@ -51,10 +51,27 @@
   &--green {
     background-color: transparent;
     border-color: $colorGreen;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
 
     @include hover {
       background-color: $colorGreen;
       color: $colorWhite;
+    }
+  }
+
+  &--orange {
+    background-color: $colorOrange;
+    border-color: $colorOrange;
+    color: $colorWhite;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+
+    @include hover {
+      background-color: transparent;
+      color: $colorGray;
     }
   }
 
@@ -94,7 +111,7 @@
 
   @include responsive767 {
     width: 115px;
-    height: 115px; 
+    height: 115px;
   }
 
   @include responsive374 {

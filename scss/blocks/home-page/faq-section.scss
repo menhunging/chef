@@ -3,6 +3,10 @@
   border-radius: 120px;
   padding: 0;
 
+  @include responsive1279{
+    border-radius: 80px;
+  }
+
   &.aos-animate {
     .faq-section__inner {
       &:after {
@@ -38,7 +42,7 @@
 
   @include responsive1699 {
     min-height: 915px;
-    padding: 120px 30px 150px;
+    padding: 120px 80px 150px;
   }
 
   @include responsive1279 {
@@ -79,7 +83,7 @@
       width: 540px;
       height: 540px;
       bottom: 148px;
-      left: 80px;
+      left: 110px;
     }
 
     @include responsive1279 {

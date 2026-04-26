@@ -257,39 +257,6 @@
   }
 }
 
-.social {
-  .social__list {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-    @include responsive767 {
-      gap: 20px;
-      margin-top: 10px;
-    }
-
-    .social__item {
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        transition: transform 0.3s;
-
-        @include responsive1699 {
-          width: 30px;
-          height: 30px;
-        }
-
-        @include hover {
-          transform: scale(0.9);
-        }
-      }
-    }
-  }
-}
-
 .coryRight {
   opacity: 0.4;
 }
