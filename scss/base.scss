@@ -223,6 +223,10 @@ section {
     margin-bottom: 40px;
   }
 
+  @include responsive374{
+    margin-bottom: 30px;
+  }
+
   .caption {
     max-width: calc(100% - 150px);
   }

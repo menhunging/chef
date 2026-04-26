@@ -173,4 +173,10 @@
     line-height: 18px;
     min-height: 75px;
   }
+
+  @include responsive374 {
+    font-size: 14px;
+    line-height: 16px;
+    min-height: 65px;
+  }
 }

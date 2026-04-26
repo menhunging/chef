@@ -71,7 +71,7 @@ $(document).ready(function () {
 
   if ($(".events-slider").length > 0) {
     new Swiper(".events-slider", {
-      slidesPerView: 2.2,
+      slidesPerView: 2,
       spaceBetween: 20,
       navigation: {
         prevEl: ".events-section .swiperBtnPrev",

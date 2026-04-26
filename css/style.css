@@ -446,6 +446,11 @@ section {
     margin-bottom: 40px;
   }
 }
+@media (max-width: 374px) {
+  .section-head {
+    margin-bottom: 30px;
+  }
+}
 .section-head .caption {
   max-width: calc(100% - 150px);
 }
@@ -2914,6 +2919,13 @@ h2,
     font-size: 16px;
     line-height: 18px;
     min-height: 75px;
+  }
+}
+@media (max-width: 374px) {
+  .event-item__link {
+    font-size: 14px;
+    line-height: 16px;
+    min-height: 65px;
   }
 }
 
