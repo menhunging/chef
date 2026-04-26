@@ -2815,10 +2815,14 @@ h2,
     margin-top: 40px;
   }
 }
+.contacts-us--version-main__controls .btn {
+  transition: all 0.3s;
+}
 @media (max-width: 767px) {
   .contacts-us--version-main__controls .btn {
     height: 80px;
     font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
   }
 }
 @media (max-width: 374px) {

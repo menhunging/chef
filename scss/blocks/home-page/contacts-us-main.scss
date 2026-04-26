@@ -162,9 +162,14 @@
   }
 
   .btn {
+    transition: all 0.3s;
+
     @include responsive767 {
       height: 80px;
       font-size: 18px;
+      transition:
+        background-color 0.3s,
+        color 0.3s;
     }
 
     @include responsive374 {
