@@ -161,28 +161,27 @@
     margin-top: 40px;
   }
 
-  .btn {
-    transition: all 0.3s;
+  .contacts-us--version-main__controls__btn {
+    width: 100%;
 
-    @include responsive767 {
-      height: 80px;
-      font-size: 18px;
-      transition:
-        background-color 0.3s,
-        color 0.3s;
-    }
-
-    @include responsive374 {
-      height: 60px;
-      font-size: 16px;
-    }
-
-    & + .btn {
+    & + .contacts-us--version-main__controls__btn {
       margin-top: 20px;
 
       @include responsive1279 {
         margin-top: 10px;
       }
+    }
+  }
+
+  .btn {
+    @include responsive767 {
+      height: 80px;
+      font-size: 18px;
+    }
+
+    @include responsive374 {
+      height: 60px;
+      font-size: 16px;
     }
   }
 }

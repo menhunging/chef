@@ -2815,28 +2815,27 @@ h2,
     margin-top: 40px;
   }
 }
-.contacts-us--version-main__controls .btn {
-  transition: all 0.3s;
+.contacts-us--version-main__controls .contacts-us--version-main__controls__btn {
+  width: 100%;
+}
+.contacts-us--version-main__controls .contacts-us--version-main__controls__btn + .contacts-us--version-main__controls__btn {
+  margin-top: 20px;
+}
+@media (max-width: 1279px) {
+  .contacts-us--version-main__controls .contacts-us--version-main__controls__btn + .contacts-us--version-main__controls__btn {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 767px) {
   .contacts-us--version-main__controls .btn {
     height: 80px;
     font-size: 18px;
-    transition: background-color 0.3s, color 0.3s;
   }
 }
 @media (max-width: 374px) {
   .contacts-us--version-main__controls .btn {
     height: 60px;
     font-size: 16px;
-  }
-}
-.contacts-us--version-main__controls .btn + .btn {
-  margin-top: 20px;
-}
-@media (max-width: 1279px) {
-  .contacts-us--version-main__controls .btn + .btn {
-    margin-top: 10px;
   }
 }
 
