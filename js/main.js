@@ -24,6 +24,55 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".docs-slider").length > 0) {
+    const swiper = new Swiper(".docs-slider", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
+      navigation: {
+        prevEl: ".docs-slider .btnSwiperPrev",
+        nextEl: ".docs-slider .btnSwiperNext",
+      },
+      pagination: {
+        el: ".docs-slider .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.1,
+          spaceBetween: 5,
+        },
+        375: {
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 1.8,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 2.15,
+          spaceBetween: 10,
+        },
+        1280: {
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+        },
+        1700: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
   // base
 
   // if ($(".burger-menu").length > 0) {

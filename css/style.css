@@ -2482,6 +2482,217 @@ h2,
     transform: translateX(0);
   }
 }
+.docs-section {
+  overflow: hidden;
+  padding: 240px 0;
+}
+@media (max-width: 1699px) {
+  .docs-section {
+    padding: 180px 0;
+  }
+}
+@media (max-width: 1279px) {
+  .docs-section {
+    padding: 120px 0;
+  }
+}
+@media (max-width: 767px) {
+  .docs-section {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 374px) {
+  .docs-section {
+    padding: 60px 0;
+  }
+}
+
+.docs-slider {
+  overflow: visible;
+}
+.docs-slider .swiper-wrapper {
+  overflow: visible;
+}
+.docs-slider .swiper-pagination {
+  position: relative;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  height: 6px;
+  margin-top: 60px;
+  background-color: #f7f4f1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+@media (max-width: 1699px) {
+  .docs-slider .swiper-pagination {
+    margin-top: 30px;
+    height: 5px;
+  }
+}
+@media (max-width: 1279px) {
+  .docs-slider .swiper-pagination {
+    height: 3px;
+  }
+}
+.docs-slider .swiper-pagination-progressbar-fill {
+  background-color: #ff8b3c;
+  border-radius: 6px;
+}
+
+.doc-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  border: solid 5px #f7f4f1;
+  border-radius: 50px;
+  padding: 40px;
+}
+@media (max-width: 1699px) {
+  .doc-item {
+    padding: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .doc-item {
+    padding: 25px;
+    gap: 30px;
+  }
+}
+@media (max-width: 374px) {
+  .doc-item {
+    padding: 20px;
+    gap: 20px;
+    border-radius: 30px;
+  }
+}
+
+.doc-item__name {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 38px;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+}
+@media (max-width: 1699px) {
+  .doc-item__name {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 1279px) {
+  .doc-item__name {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 1023px) {
+  .doc-item__name {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .doc-item__name {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 374px) {
+  .doc-item__name {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.doc-item__link {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26px;
+  color: #ff8b3c;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s;
+}
+@media (max-width: 1699px) {
+  .doc-item__link {
+    font-size: 20px;
+    line-height: 22px;
+    gap: 15px;
+  }
+}
+@media (max-width: 1279px) {
+  .doc-item__link {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .doc-item__link {
+    font-size: 16px;
+    line-height: 20px;
+    gap: 10px;
+  }
+}
+@media (hover: hover) {
+  .doc-item__link:hover {
+    text-decoration-color: #ff8b3c;
+  }
+}
+.doc-item__link .icon-download {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 2V22M18 22L8 12M18 22L28 12' stroke='%23FF8B3C' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M32 25V33H4V25' stroke='%23FF8B3C' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+@media (max-width: 1699px) {
+  .doc-item__link .icon-download {
+    width: 26px;
+    height: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .doc-item__link .icon-download {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.doc-item__text {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: right;
+  opacity: 0.5;
+}
+@media (max-width: 1699px) {
+  .doc-item__text {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 1279px) {
+  .doc-item__text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .doc-item__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 .faq-section {
   background-color: #f7f4f1;
   border-radius: 120px;

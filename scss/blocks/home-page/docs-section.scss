@@ -1,0 +1,191 @@
+.docs-section {
+  overflow: hidden;
+  padding: 240px 0;
+
+  @include responsive1699 {
+    padding: 180px 0;
+  }
+
+  @include responsive1279 {
+    padding: 120px 0;
+  }
+
+  @include responsive767 {
+    padding: 80px 0;
+  }
+
+  @include responsive374 {
+    padding: 60px 0;
+  }
+}
+
+.docs-slider {
+  overflow: visible;
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
+
+  .swiper-pagination {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    height: 6px;
+    margin-top: 60px;
+    background-color: $colorBeige;
+    border-radius: 6px;
+    overflow: hidden;
+
+    @include responsive1699 {
+      margin-top: 30px;
+      height: 5px;
+    }
+
+    @include responsive1279 {
+      height: 3px;
+    }
+  }
+
+  .swiper-pagination-progressbar-fill {
+    background-color: $colorOrange;
+    border-radius: 6px;
+  }
+}
+
+.doc-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  border: solid 5px $colorBeige;
+  border-radius: 50px;
+  padding: 40px;
+
+  @include responsive1699 {
+    padding: 30px;
+  }
+
+  @include responsive767 {
+    padding: 25px;
+    gap: 30px;
+  }
+
+  @include responsive374 {
+    padding: 20px;
+    gap: 20px;
+    border-radius: 30px;
+  }
+}
+
+.doc-item__name {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 38px;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+
+  @include responsive1699 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  @include responsive1279 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  @include responsive1023 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive767 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive374 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.doc-item__link {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26px;
+  color: $colorOrange;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s;
+
+  @include responsive1699 {
+    font-size: 20px;
+    line-height: 22px;
+    gap: 15px;
+  }
+
+  @include responsive1279 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 20px;
+    gap: 10px;
+  }
+
+  @include hover {
+    text-decoration-color: $colorOrange;
+  }
+
+  .icon-download {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 2V22M18 22L8 12M18 22L28 12' stroke='%23FF8B3C' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M32 25V33H4V25' stroke='%23FF8B3C' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 36px;
+    height: 36px;
+    position: relative;
+
+    @include responsive1699 {
+      width: 26px;
+      height: 26px;
+    }
+
+    @include responsive767 {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.doc-item__text {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: right;
+  opacity: 0.5;
+
+  @include responsive1699 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive1279 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
