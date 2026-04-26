@@ -69,6 +69,43 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".events-slider").length > 0) {
+    new Swiper(".events-slider", {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+      navigation: {
+        prevEl: ".events-section .swiperBtnPrev",
+        nextEl: ".events-section .swiperBtnNext",
+      },
+      pagination: {
+        el: ".events-slider .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.1,
+          spaceBetween: 5,
+        },
+        375: {
+          slidesPerView: 1.095,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2.15,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 2.15,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
   // base
 
   // if ($(".burger-menu").length > 0) {
