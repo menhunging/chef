@@ -40,10 +40,10 @@
   }
 
   @include after {
-    background-image: url("../../../img/bg-faq.png");
+    background-image: url("../img/bg-faq.png");
     background-image: image-set(
-      url("../../../img/bg-faq.webp") type("image/webp"),
-      url("../../../img/bg-faq.png") type("image/png")
+      url("../img/bg-faq.webp") type("image/webp"),
+      url("../img/bg-faq.png") type("image/png")
     );
     background-size: contain;
     background-repeat: no-repeat;
@@ -89,7 +89,7 @@
   }
 
   @include before {
-    background-image: url("../../../img/svg/faq-decor.svg");
+    background-image: url("../img/svg/faq-decor.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
