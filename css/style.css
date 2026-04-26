@@ -3041,7 +3041,7 @@ h2,
   .partners-marquee-block__track--text span::before {
     width: 16px;
     height: 16px;
-    border: solid 5px #2fac65;
+    border: solid 5px #f1eae2;
   }
 }
 @media (max-width: 1699px) {
