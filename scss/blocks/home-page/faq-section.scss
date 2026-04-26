@@ -3,6 +3,20 @@
   border-radius: 120px;
   padding: 0;
 
+  &.aos-animate {
+    .faq-section__inner {
+      &:after {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      &:before {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
   @include responsive767 {
     border-radius: 0;
     background-color: transparent;
@@ -54,7 +68,12 @@
     bottom: 38px;
     left: 100px;
     pointer-events: none;
+    transition:
+      transform 1.5s,
+      opacity 1.5s;
     z-index: -1;
+    transform: translateX(-100%);
+    opacity: 0;
 
     @include responsive1699 {
       width: 540px;
@@ -85,6 +104,8 @@
       bottom: auto;
       left: calc(50% - 130px);
       top: -90px;
+      transform: initial;
+      opacity: 1;
     }
   }
 
@@ -99,7 +120,12 @@
     bottom: 0;
     left: 0px;
     pointer-events: none;
+    transition:
+      transform 1.8s,
+      opacity 1.8s;
     z-index: -1;
+    transform: translateX(-100%);
+    opacity: 0;
 
     @include responsive1279 {
       width: 300px;
@@ -116,6 +142,8 @@
       top: 0;
       background-position: center -180px;
       border-radius: 38px;
+      transform: initial;
+      opacity: 1;
     }
 
     @include responsive374 {

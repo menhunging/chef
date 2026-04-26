@@ -25,17 +25,13 @@ $(document).ready(function () {
   }
 
   if ($(".docs-slider").length > 0) {
-    const swiper = new Swiper(".docs-slider", {
+    new Swiper(".docs-slider", {
       slidesPerView: 3,
       spaceBetween: 20,
       // autoplay: {
       //   delay: 5000,
       //   disableOnInteraction: false,
       // },
-      navigation: {
-        prevEl: ".docs-slider .btnSwiperPrev",
-        nextEl: ".docs-slider .btnSwiperNext",
-      },
       pagination: {
         el: ".docs-slider .swiper-pagination",
         type: "progressbar",
