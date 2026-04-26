@@ -6,108 +6,112 @@ h5,
 h6,
 .caption {
   font-family: $fontMain;
-  font-weight: 600;
+  font-weight: 900;
 }
 
-h1,
-.caption--h1 {
-  font-size: 44px;
-  line-height: 120%;
-  font-weight: 400;
+// h1,
+// .caption--h1 {
+//   font-size: 44px;
+//   line-height: 120%;
+//   font-weight: 400;
 
-  @include responsive1549 {
-    font-size: 36px;
-  }
+//   @include responsive1549 {
+//     font-size: 36px;
+//   }
 
-  @include responsive1279 {
-    font-size: 32px;
-  }
+//   @include responsive1279 {
+//     font-size: 32px;
+//   }
 
-  @include responsive1023 {
-    font-size: 30px;
-  }
+//   @include responsive1023 {
+//     font-size: 30px;
+//   }
 
-  @include responsive767 {
-    font-size: 24px;
-  }
-}
+//   @include responsive767 {
+//     font-size: 24px;
+//   }
+// }
 
 h2,
 .caption--h2 {
-  font-size: 96px;
-  font-weight: 400;
-  line-height: 120%;
+  font-size: 80px;
+  line-height: 82px;
 
   @include responsive1549 {
-    font-size: 56px;
+    font-size: 60px;
+    line-height: 62px;
   }
 
   @include responsive1279 {
-    font-size: 56px;
+    font-size: 40px;
+    line-height: 42px;
   }
 
   @include responsive1023 {
-    font-size: 55px;
+    font-size: 35px;
+    line-height: 37px;
   }
 
   @include responsive767 {
-    font-size: 55px;
+    font-size: 36px;
+    line-height: 38px;
   }
 
-  @include responsive479 {
+  @include responsive374 {
     font-size: 30px;
+    line-height: 32px;
   }
 }
 
-h3,
-.caption--h3 {
-  font-size: 44px;
-  line-height: 120%;
-  font-weight: 400;
+// h3,
+// .caption--h3 {
+//   font-size: 44px;
+//   line-height: 120%;
+//   font-weight: 400;
 
-  @include responsive1549 {
-    font-size: 30px;
-  }
+//   @include responsive1549 {
+//     font-size: 30px;
+//   }
 
-  @include responsive1279 {
-    font-size: 30px;
-  }
+//   @include responsive1279 {
+//     font-size: 30px;
+//   }
 
-  @include responsive1023 {
-    font-size: 28px;
-  }
+//   @include responsive1023 {
+//     font-size: 28px;
+//   }
 
-  @include responsive767 {
-    font-size: 24px;
-  }
+//   @include responsive767 {
+//     font-size: 24px;
+//   }
 
-  @include responsive639 {
-    font-size: 18px;
-  }
-}
+//   @include responsive639 {
+//     font-size: 18px;
+//   }
+// }
 
-h4,
-.caption--h4 {
-  font-size: 30px;
-  line-height: 120%;
+// h4,
+// .caption--h4 {
+//   font-size: 30px;
+//   line-height: 120%;
 
-  @include responsive1549 {
-    font-size: 28px;
-  }
+//   @include responsive1549 {
+//     font-size: 28px;
+//   }
 
-  @include responsive1279 {
-    font-size: 24px;
-  }
+//   @include responsive1279 {
+//     font-size: 24px;
+//   }
 
-  @include responsive767 {
-    font-size: 22px;
-  }
+//   @include responsive767 {
+//     font-size: 22px;
+//   }
 
-  @include responsive479 {
-    font-size: 18px;
-  }
+//   @include responsive479 {
+//     font-size: 18px;
+//   }
 
-  @include responsive389 {
-    font-size: 15px;
-  }
-}
+//   @include responsive374 {
+//     font-size: 15px;
+//   }
+// }

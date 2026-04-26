@@ -1,0 +1,142 @@
+.marquee-block {
+  overflow: hidden;
+  padding: 240px 0;
+
+  @include responsive1699 {
+    padding: 160px 0;
+  }
+
+  @include responsive1279 {
+    padding: 120px 0;
+  }
+
+  @include responsive767 {
+    padding: 70px 0;
+  }
+}
+
+.marquee-block__line {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-block__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 24s linear infinite;
+  padding: 2px 0;
+
+  span {
+    flex: 0 0 auto;
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 30px;
+
+    @include responsive767{
+      padding-right: 10px;
+    }
+
+    @include before {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background-color: $colorOrange;
+      position: relative;
+      display: block;
+      order: -1;
+      margin-right: 10px;
+
+      @include responsive1699 {
+        width: 33px;
+        height: 33px;
+      }
+
+      @include responsive1279 {
+        width: 23px;
+        height: 23px;
+      }
+
+      @include responsive767 {
+        width: 16px;
+        height: 16px;
+        margin-right: 0;
+      }
+    }
+
+    @include after {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background-color: $colorWhite;
+      border: solid 12px $colorGreen;
+      position: relative;
+      display: block;
+      order: -2;
+
+      @include responsive1699 {
+        width: 33px;
+        height: 33px;
+        border: solid 10px $colorGreen;
+      }
+
+      @include responsive1279 {
+        width: 23px;
+        height: 23px;
+        border: solid 7px $colorGreen;
+      }
+
+      @include responsive767 {
+        width: 16px;
+        height: 16px;
+        border: solid 5px $colorGreen;
+      }
+    }
+
+    @include responsive1699 {
+      font-size: 44px;
+    }
+
+    @include responsive1279 {
+      font-size: 36px;
+    }
+
+    @include responsive1023 {
+      font-size: 30px;
+    }
+
+    @include responsive767 {
+      font-size: 20px;
+    }
+  }
+}
+
+.marquee-block__line--reverse {
+  .marquee-block__track {
+    animation-name: marquee-right;
+  }
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

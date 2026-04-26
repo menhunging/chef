@@ -12,7 +12,9 @@
 @import "./components/footer";
 
 // HOME PAGE
-@import "blocks/home-page/grettings-main.scss";
+@import "blocks/home-page/hero-block.scss";
+@import "blocks/home-page/marquee-block.scss";
+@import "blocks/home-page/faq-section.scss";
 
 // BLOCKS
 @import "blocks";

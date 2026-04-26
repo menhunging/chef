@@ -20,11 +20,11 @@
     <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 
-<body class="index-page">
+<body class="index-page"> <!--  body.index-page только для главной страницы -->
 
     <div class="site-wrapper">
         <header class="header">
@@ -82,9 +82,141 @@
         </header>
 
         <main class="main">
-            <section class="grettings-main">
+            <section class="hero-block" data-aos>
+                <div class="picture-block hero-block__img-left" data-aos="zoom-in-right" data-aos-duration="1200">
+                    <picture>
+                        <source srcset="../../img/hero_img_left.webp" type="image/webp" />
+                        <img src="../../img/hero_img_left.png" fetchpriority="high" />
+                    </picture>
+                </div>
+
                 <div class="container">
-                    слайд
+                    <div class="hero-block__inner">
+                        <img class="hero-logo" src="../../img/svg/hero-logo.svg" alt="hero-logo" fetchpriority="high"
+                            data-aos="zoom-in" data-aos-duration="1200" />
+                        <p data-aos="fade-up" data-aos-duration="1500">Уникальная рецептура и современные технологии
+                            производства соусов</p>
+                    </div>
+                </div>
+
+                <div class="picture-block hero-block__img-right" data-aos="zoom-in-left" data-aos-duration="1200">
+                    <picture>
+                        <source srcset="../../img/hero_img_right.webp" type="image/webp" />
+                        <img src="../../img/hero_img_right.png" fetchpriority="high" />
+                    </picture>
+                </div>
+
+                <div class="hero-block__controls" data-aos="zoom-in-left" data-aos-duration="1500">
+                    <a href="#" class="btn-find-out-more"></a>
+                </div>
+
+                <div class="picture-block hero-block__img-mobile">
+                    <picture>
+                        <source srcset="../../img/hero_img_box_mobile.webp" type="image/webp" />
+                        <img src="../../img/hero_img_box_mobile.png" fetchpriority="high" />
+                    </picture>
+                </div>
+
+            </section>
+
+            <section class="marquee-block">
+                <div class="marquee-block__line">
+                    <div class="marquee-block__track">
+                        <span>У КАЖДОГО ПРОДУКТА — СВОЯ ЗАДАЧА</span>
+                        <span>У КАЖДОГО ПРОДУКТА — СВОЯ ЗАДАЧА</span>
+                        <span>У КАЖДОГО ПРОДУКТА — СВОЯ ЗАДАЧА</span>
+                        <span>У КАЖДОГО ПРОДУКТА — СВОЯ ЗАДАЧА</span>
+                    </div>
+                </div>
+
+                <div class="marquee-block__line marquee-block__line--reverse">
+                    <div class="marquee-block__track">
+                        <span>У КАЖДОГО ПРОДУКТА — СВОЯ ЗАДАЧА</span>
+                        <span>У КАЖДОГО ПРОДУКТА — СВОЯ ЗАДАЧА</span>
+                        <span>У КАЖДОГО ПРОДУКТА — СВОЯ ЗАДАЧА</span>
+                        <span>У КАЖДОГО ПРОДУКТА — СВОЯ ЗАДАЧА</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <div class="container">
+                    <div class="faq-section__inner">
+                        <h2 class="caption caption--h2" data-aos="fade-right" data-aos-duration="1200">
+                            Часто задаваемые вопросы (FAQ)
+                        </h2>
+                        <div class="faq-section__list">
+                            <div class="faq-section__item">
+                                <span class="faq-section__quest">
+                                    Каков минимальный объём заказа для сотрудничества?
+                                </span>
+                                <div class="faq-section__answer">
+                                    <p>
+                                        Минимальная сумма заказа составляет 15 000 рублей. Мы работаем с ресторанами
+                                        любого
+                                        формата — от небольших суши-баров до сетевых заведений. Для постоянных партнёров
+                                        возможна гибкая система скидок и индивидуальные условия отгрузки.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-section__item">
+                                <span class="faq-section__quest">
+                                    Как часто обновляется ассортимент и можно ли заказать редкие позиции?
+                                </span>
+                                <div class="faq-section__answer">
+                                    <p>
+                                        Минимальная сумма заказа составляет 15 000 рублей. Мы работаем с ресторанами
+                                        любого
+                                        формата — от небольших суши-баров до сетевых заведений. Для постоянных партнёров
+                                        возможна гибкая система скидок и индивидуальные условия отгрузки.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-section__item">
+                                <span class="faq-section__quest">
+                                    Есть ли у вас сертификаты качества ?
+                                </span>
+                                <div class="faq-section__answer">
+                                    <p>
+                                        Минимальная сумма заказа составляет 15 000 рублей. Мы работаем с ресторанами
+                                        любого
+                                        формата — от небольших суши-баров до сетевых заведений. Для постоянных партнёров
+                                        возможна гибкая система скидок и индивидуальные условия отгрузки.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-section__item">
+                                <span class="faq-section__quest">
+                                    Как осуществляется доставка и в какие сроки вы работаете?
+                                </span>
+                                <div class="faq-section__answer">
+                                    <p>
+                                        Минимальная сумма заказа составляет 15 000 рублей. Мы работаем с ресторанами
+                                        любого
+                                        формата — от небольших суши-баров до сетевых заведений. Для постоянных партнёров
+                                        возможна гибкая система скидок и индивидуальные условия отгрузки.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-section__item">
+                                <span class="faq-section__quest">
+                                    Как стать постоянным партнёром и получить доступ к специальным условиям?
+                                </span>
+                                <div class="faq-section__answer">
+                                    <p>
+                                        Минимальная сумма заказа составляет 15 000 рублей. Мы работаем с ресторанами
+                                        любого
+                                        формата — от небольших суши-баров до сетевых заведений. Для постоянных партнёров
+                                        возможна гибкая система скидок и индивидуальные условия отгрузки.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -117,17 +249,17 @@
                         <div class="social">
                             <ul class="social__list">
                                 <li class="social__item">
-                                    <a href="#">
+                                    <a href="#" target="_blank">
                                         <img src="../../img/svg/max.svg" alt="max" />
                                     </a>
                                 </li>
                                 <li class="social__item">
-                                    <a href="#">
+                                    <a href="#" target="_blank">
                                         <img src="../../img/svg/vk.svg" alt="vk" />
                                     </a>
                                 </li>
                                 <li class="social__item">
-                                    <a href="#">
+                                    <a href="#" target="_blank">
                                         <img src="../../img/svg/tegram.svg" alt="tegram" />
                                     </a>
                                 </li>
@@ -172,7 +304,7 @@
 <script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
 <script src="../../libs/fancybox/fancybox.umd.js"></script>
 <script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
-<!-- <script src="../../libs/aos/aos.js"></script> -->
+<script src="../../libs/aos/aos.js"></script>
 <script src="../../js/main.js"></script>
 
 </html>

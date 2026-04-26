@@ -13,6 +13,9 @@ body {
   }
 
   &.index-page {
+    .site-wrapper {
+      overflow: hidden;
+    }
   }
 }
 
@@ -124,9 +127,9 @@ div {
   }
 
   @include responsive1279 {
-    width: 80px;
-    height: 80px;
-    min-width: 80px;
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
   }
 
   @include responsive767 {

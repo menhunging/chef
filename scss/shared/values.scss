@@ -37,7 +37,7 @@ $responsive1023: "1023px";
 $responsive767: "767px";
 $responsive639: "639px";
 $responsive479: "479px";
-$responsive389: "389px";
+$responsive374: "374px";
 
 // @media responsive
 
@@ -117,8 +117,8 @@ $responsive389: "389px";
   }
 }
 
-@mixin responsive389 {
-  @media (max-width: $responsive389) {
+@mixin responsive374 {
+  @media (max-width: $responsive374) {
     @content;
   }
 }

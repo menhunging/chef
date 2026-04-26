@@ -1,0 +1,354 @@
+.faq-section {
+  background-color: $colorBeige;
+  border-radius: 120px;
+  padding: 0;
+
+  @include responsive767 {
+    border-radius: 0;
+    background-color: transparent;
+    margin-top: 70px;
+  }
+}
+
+.faq-section__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  min-height: 900px;
+  background-size: 790px;
+  background-repeat: no-repeat;
+  background-position: -100px 302px;
+  padding: 120px 0 150px;
+
+  @include responsive1699 {
+    min-height: 915px;
+    padding: 120px 30px 150px;
+  }
+
+  @include responsive1279 {
+    padding: 60px 30px 100px;
+    min-height: 720px;
+  }
+
+  @include responsive767 {
+    border-radius: 35px;
+    padding-top: 211px;
+    background-color: $colorBeige;
+    padding-bottom: 50px;
+  }
+
+  @include after {
+    background-image: url("../../../img/bg-faq.png");
+    background-image: image-set(
+      url("../../../img/bg-faq.webp") type("image/webp"),
+      url("../../../img/bg-faq.png") type("image/png")
+    );
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 580px;
+    height: 580px;
+    position: absolute;
+    bottom: 38px;
+    left: 100px;
+    pointer-events: none;
+    z-index: -1;
+
+    @include responsive1699 {
+      width: 540px;
+      height: 540px;
+      bottom: 148px;
+      left: 80px;
+    }
+
+    @include responsive1279 {
+      width: 370px;
+      height: 350px;
+      bottom: auto;
+      left: 50px;
+      top: 140px;
+    }
+
+    @include responsive1023 {
+      width: 320px;
+      height: 300px;
+      bottom: auto;
+      left: 50px;
+      top: 130px;
+    }
+
+    @include responsive767 {
+      width: 260px;
+      height: 260px;
+      bottom: auto;
+      left: calc(50% - 130px);
+      top: -90px;
+    }
+  }
+
+  @include before {
+    background-image: url("../../../img/svg/faq-decor.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 360px;
+    height: 765px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    pointer-events: none;
+    z-index: -1;
+
+    @include responsive1279 {
+      width: 300px;
+      height: 630px;
+      bottom: 0;
+      left: 0;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      height: 100%;
+      bottom: auto;
+      left: 0;
+      top: 0;
+      background-position: center -180px;
+      border-radius: 38px;
+    }
+
+    @include responsive374 {
+      background-position: center -130px;
+    }
+  }
+
+  .caption {
+    max-width: 675px;
+    text-transform: uppercase;
+
+    @include responsive1699 {
+      max-width: 495px;
+    }
+
+    @include responsive1279 {
+      max-width: 320px;
+    }
+
+    @include responsive1023 {
+      max-width: 280px;
+    }
+
+    @include responsive767 {
+      max-width: 100%;
+    }
+  }
+}
+
+.faq-section__list {
+  counter-reset: faq-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: calc(100% - 675px - 94px);
+
+  @include responsive1699 {
+    width: calc(100% - 495px - 75px);
+  }
+
+  @include responsive1279 {
+    width: calc(100% - 320px - 50px);
+    gap: 40px;
+  }
+
+  @include responsive1023 {
+    width: calc(100% - 280px - 30px);
+  }
+
+  @include responsive767 {
+    width: 100%;
+    margin-top: 40px;
+    gap: 30px;
+  }
+}
+
+.faq-section__item {
+  counter-increment: faq-counter;
+  position: relative;
+  padding-left: 72px;
+
+  @include responsive1279 {
+    padding-left: 50px;
+  }
+
+  @include responsive767 {
+    padding-left: 30px;
+  }
+
+  &::before {
+    content: counter(faq-counter, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0px;
+    color: $colorGray;
+    opacity: 0.2;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    transition:
+      color 0.3s,
+      opacity 0.3s;
+
+    @include responsive1279 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @include responsive374 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &.opened {
+    &::before {
+      color: $colorOrange;
+      opacity: 1;
+    }
+
+    .faq-section__quest {
+      color: $colorOrange;
+
+      &::after {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='4' viewBox='0 0 22 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='22' width='4' height='22' transform='rotate(90 22 0)' fill='white'/%3e%3c/svg%3e ");
+        transform: translateY(-50%);
+        background-color: $colorOrange;
+
+        @include responsive767 {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+.faq-section__quest {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  padding-right: 60px;
+  min-height: 60px;
+
+  @include responsive1699 {
+    font-size: 22px;
+    line-height: 24px;
+    min-height: 50px;
+  }
+
+  @include responsive1279 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive1023 {
+    padding-right: 50px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+    min-height: 60px;
+    padding-right: 40px;
+  }
+
+  @include responsive374 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include after {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='9' width='4' height='22' fill='%23454C52'/%3e%3crect x='22' y='9' width='4' height='22' transform='rotate(90 22 9)' fill='%23454C52'/%3e%3c/svg%3e ");
+    background-size: 22px;
+    border: solid 4px $colorOrange;
+    border-radius: 50%;
+
+    @include responsive1699 {
+      width: 50px;
+      height: 50px;
+      background-size: 18px;
+    }
+
+    @include responsive1279 {
+      width: 40px;
+      height: 40px;
+      background-size: 12px;
+      border-width: 2px;
+    }
+
+    @include responsive767 {
+      width: 30px;
+      height: 30px;
+      background-size: 10px;
+      top: 0;
+      transform: initial;
+    }
+  }
+
+  @include hover {
+    color: $colorOrange;
+  }
+}
+
+.faq-section__answer {
+  display: none;
+  padding: 30px 0 0;
+
+  @include responsive1279 {
+    padding-top: 15px;
+  }
+
+  @include responsive767 {
+    padding-top: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+
+    @include responsive1279 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive1023 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include responsive767 {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
