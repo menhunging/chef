@@ -159,8 +159,51 @@
 }
 
 .partners-marquee-block__line--reverse {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  margin-top: 30px;
+
   .partners-marquee-block__track {
     animation-name: partners-marquee-right;
+  }
+}
+
+.slider-partners-main {
+  overflow: visible;
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include invisLink;
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @include responsive767 {
+      display: block;
+      max-width: calc(100% - 20px);
+      margin: 30px auto 0;
+    }
+  }
+
+  img {
+    height: 50px;
+
+    @include responsive1699 {
+      height: 40px;
+    }
+
+    @include responsive374{
+      height: 30px;
+    }
   }
 }
 

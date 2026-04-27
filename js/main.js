@@ -106,6 +106,102 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".slider-partners-main").length > 0) {
+    new Swiper(".slider-partners-main", {
+      slidesPerView: 3,
+      spaceBetween: 100,
+      loop: true,
+      speed: 2000,
+      initialSlide: 1,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".slider-partners-main .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 100,
+        },
+      },
+    });
+  }
+
+  if ($(".products-slider").length > 0) {
+    const productsSlidesCount = $(".products-slider").find(
+      ".swiper-wrapper > .swiper-slide",
+    ).length;
+
+    if (productsSlidesCount <= 4) {
+      const parents = $(".products-slider").closest(".popular-products");
+
+      parents.find(".swiper-controls").hide();
+      $(".products-slider").find(".swiper-pagination").hide();
+    }
+
+    new Swiper(".products-slider", {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      navigation: {
+        prevEl: ".popular-products .swiperBtnPrev",
+        nextEl: ".popular-products .swiperBtnNext",
+      },
+      pagination: {
+        el: ".products-slider .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 5,
+        },
+        375: {
+          slidesPerView: 1.25,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 1.8,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1700: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
   // base
 
   // if ($(".burger-menu").length > 0) {

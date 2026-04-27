@@ -16,6 +16,45 @@ body {
     .site-wrapper {
       overflow: hidden;
     }
+
+    .popular-products {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1020' height='480' viewBox='0 0 1020 480' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M540 240C540 372.548 647.452 480 780 480C912.548 480 1020 372.548 1020 240C1020 107.452 912.548 0 780 0C647.452 0 540 107.452 540 240ZM886.153 240C886.153 298.626 838.627 346.153 780 346.153C721.374 346.153 673.847 298.626 673.847 240C673.847 181.373 721.374 133.847 780 133.847C838.627 133.847 886.153 181.373 886.153 240Z' fill='%23F7F4F1'/%3e%3ccircle cx='240' cy='240' r='240' transform='matrix(-1 0 0 1 480 0)' fill='%23F7F4F1'/%3e%3c/svg%3e ");
+      background-position: 200% 80px;
+      background-repeat: no-repeat;
+      transition: background-position 1.2s;
+
+      @include responsive1699 {
+        background-size: 50%;
+      }
+
+      @include responsive1279 {
+        background-position: 200% 40px;
+      }
+
+      @include responsive767 {
+        background-image: none;
+      }
+
+      .caption {
+        max-width: 700px;
+
+        @include responsive1699 {
+          max-width: 50%;
+        }
+
+        @include responsive767 {
+          max-width: 380px;
+        }
+      }
+
+      &.aos-animate {
+        background-position: 100% 80px;
+
+        @include responsive1279 {
+          background-position: 100% 40px;
+        }
+      }
+    }
   }
 }
 
@@ -211,6 +250,10 @@ section {
   flex-wrap: wrap;
   margin-bottom: 80px;
 
+  @include responsive1699 {
+    margin-bottom: 60px;
+  }
+
   @include responsive1279 {
     margin-bottom: 40px;
   }
@@ -223,7 +266,7 @@ section {
     margin-bottom: 40px;
   }
 
-  @include responsive374{
+  @include responsive374 {
     margin-bottom: 30px;
   }
 
@@ -346,7 +389,7 @@ section {
   height: 6px;
   margin-top: 60px;
   background-color: $colorBeige;
-  border-radius: 6px!important;
+  border-radius: 6px !important;
   overflow: hidden;
 
   @include responsive1699 {
@@ -361,7 +404,7 @@ section {
 
 .swiper-pagination-progressbar-fill {
   background-color: $colorOrange !important;
-  border-radius: 6px!important;
+  border-radius: 6px !important;
 }
 
 .social {
