@@ -202,6 +202,37 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".slider-adv").length > 0) {
+    let advSwiper = null;
+
+    const advSliderMediaQuery = window.matchMedia("(max-width: 767px)");
+
+    const initAdvSwiper = function () {
+      advSwiper = new Swiper(".slider-adv", {
+        slidesPerView: 1.25,
+        spaceBetween: 10,
+        pagination: {
+          el: ".slider-adv .swiper-pagination",
+          type: "progressbar",
+        },
+      });
+    };
+
+    const toggleAdvSwiper = function () {
+      if (advSliderMediaQuery.matches) {
+        if (!advSwiper) {
+          initAdvSwiper();
+        }
+      } else if (advSwiper) {
+        advSwiper.destroy(true, true);
+        advSwiper = null;
+      }
+    };
+
+    toggleAdvSwiper();
+    advSliderMediaQuery.addEventListener("change", toggleAdvSwiper);
+  }
+
   // base
 
   // if ($(".burger-menu").length > 0) {

@@ -1,0 +1,380 @@
+.adv-section {
+  position: relative;
+
+  @include responsive767 {
+    overflow: hidden;
+  }
+
+  &.aos-animate {
+    &:before {
+      opacity: 1;
+      left: 0;
+
+      @include responsive1699 {
+        left: calc(50% - 860px);
+      }
+
+      @include responsive1549 {
+        left: calc(50% - 770px);
+      }
+
+      @include responsive1023 {
+        left: calc(50% - 520px);
+      }
+    }
+
+    &:after {
+      opacity: 1;
+      right: 0;
+
+      @include responsive1699 {
+        right: calc(50% - 860px);
+      }
+
+      @include responsive1549 {
+        right: calc(50% - 770px);
+      }
+
+      @include responsive1023 {
+        right: calc(50% - 520px);
+      }
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @include responsive767 {
+      display: block;
+    }
+  }
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='470' height='267' viewBox='0 0 470 267' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M70 133.5C70 166.637 43.1371 193.5 10 193.5C-23.1371 193.5 -50 166.637 -50 133.5C-50 100.363 -23.1371 73.5 10 73.5C43.1371 73.5 70 100.363 70 133.5ZM-16.5382 133.5C-16.5382 148.157 -4.65663 160.038 10 160.038C24.6566 160.038 36.5382 148.157 36.5382 133.5C36.5382 118.843 24.6566 106.962 10 106.962C-4.65663 106.962 -16.5382 118.843 -16.5382 133.5Z' fill='%23F7F4F1'/%3e%3ccircle cx='143.333' cy='133.5' r='60' fill='%23F7F4F1'/%3e%3cpath d='M336.667 133.5C336.667 166.637 309.804 193.5 276.667 193.5C243.53 193.5 216.667 166.637 216.667 133.5C216.667 100.363 243.53 73.5 276.667 73.5C309.804 73.5 336.667 100.363 336.667 133.5ZM250.128 133.5C250.128 148.157 262.01 160.038 276.667 160.038C291.323 160.038 303.205 148.157 303.205 133.5C303.205 118.843 291.323 106.962 276.667 106.962C262.01 106.962 250.128 118.843 250.128 133.5Z' fill='%23F7F4F1'/%3e%3ccircle cx='410' cy='133.5' r='60' fill='%23F7F4F1'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 470px;
+    height: 267px;
+    position: absolute;
+    top: 80px;
+    left: -500px;
+    z-index: -1;
+    opacity: 0;
+    transition:
+      left 1.5s,
+      opacity 1.5s ease;
+
+    @include responsive1699 {
+      top: 40px;
+    }
+  }
+
+  @include after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='470' height='267' viewBox='0 0 470 267' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M120 133.5C120 166.637 93.1371 193.5 60 193.5C26.8629 193.5 0 166.637 0 133.5C0 100.363 26.8629 73.5 60 73.5C93.1371 73.5 120 100.363 120 133.5ZM33.4618 133.5C33.4618 148.157 45.3434 160.038 60 160.038C74.6566 160.038 86.5382 148.157 86.5382 133.5C86.5382 118.843 74.6566 106.962 60 106.962C45.3434 106.962 33.4618 118.843 33.4618 133.5Z' fill='%23F7F4F1'/%3e%3ccircle cx='193.333' cy='133.5' r='60' fill='%23F7F4F1'/%3e%3cpath d='M386.667 133.5C386.667 166.637 359.804 193.5 326.667 193.5C293.53 193.5 266.667 166.637 266.667 133.5C266.667 100.363 293.53 73.5 326.667 73.5C359.804 73.5 386.667 100.363 386.667 133.5ZM300.128 133.5C300.128 148.157 312.01 160.038 326.667 160.038C341.323 160.038 353.205 148.157 353.205 133.5C353.205 118.843 341.323 106.962 326.667 106.962C312.01 106.962 300.128 118.843 300.128 133.5Z' fill='%23F7F4F1'/%3e%3ccircle cx='460' cy='133.5' r='60' fill='%23F7F4F1'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 470px;
+    height: 267px;
+    position: absolute;
+    bottom: 80px;
+    right: -500px;
+    z-index: -1;
+    opacity: 0;
+    transition:
+      right 2s,
+      opacity 2s ease;
+
+    @include responsive1699 {
+      bottom: 40px;
+    }
+  }
+}
+
+.adv-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+
+  @include responsive1699 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  @include responsive1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive767 {
+    display: flex;
+    gap:0;
+  }
+}
+
+.adv-item {
+  position: relative;
+  height: 270px;
+  perspective: 1000px;
+
+  @include responsive1699 {
+    height: 240px;
+  }
+
+  @include responsive767 {
+    height: 370px;
+    background-color: $colorOrange;
+    border-radius: 35px;
+    color: $colorWhite;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  @include hover {
+    .adv-item__front {
+      transform: rotateY(180deg);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .adv-item__back {
+      transform: rotateY(0deg);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &:focus-within {
+    .adv-item__front {
+      transform: rotateY(180deg);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .adv-item__back {
+      transform: rotateY(0deg);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.adv-item__front {
+  display: flex;
+  flex-direction: column;
+  background-color: $colorOrange;
+  border-radius: 50px;
+  color: $colorWhite;
+  padding: 40px 50px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+
+  @include responsive1699 {
+    padding: 30px 40px;
+  }
+
+  @include responsive1279 {
+    padding: 20px 30px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include responsive767 {
+    padding: 0;
+    position: relative;
+    transform: inherit;
+    backface-visibility: visible;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    color: $colorWhite;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: initial;
+  }
+}
+
+.adv-item__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border: solid 5px $colorOrange;
+  background-color: $colorWhite;
+  border-radius: 50px;
+  padding: 40px 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  z-index: 1;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  pointer-events: none;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+  overflow: hidden;
+
+  @include responsive1699 {
+    padding: 30px 40px;
+  }
+
+  @include responsive1279 {
+    padding: 20px 30px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include responsive767 {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    transform: initial;
+    backface-visibility: visible;
+    pointer-events: auto;
+    color: $colorWhite-a8;
+    opacity: 1;
+    height: auto;
+    font-size: 12px;
+    line-height: 14px;
+    max-width: 90%;
+  }
+
+  .picture-block {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    z-index: -1;
+
+    @include responsive767 {
+      display: none;
+    }
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      background-color: $colorGray;
+      opacity: 0.6;
+      z-index: 1;
+    }
+
+    & + * {
+      color: $colorWhite;
+
+      @include responsive767{
+        color: $colorWhite-a8;
+      }
+    }
+  }
+
+  ul {
+    li {
+      position: relative;
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      @include before {
+        min-width: 3px;
+        width: 5px;
+        height: 5px;
+        background-color: $colorWhite;
+        border-radius: 50%;
+        position: relative;
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.adv-item__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 26px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='46' viewBox='0 0 15 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.5'%3e%3cmask id='path-1-inside-1_2822_6672' fill='white'%3e%3cpath d='M6.63282 45.4972C7.57089 46.3602 8.53433 46.0486 8.0843 45.0465C7.27933 43.2773 6.48069 40.2855 7.97654 35.721C11.3993 25.3024 19.1067 17.8659 12.2486 6.23422C10.9734 4.19332 9.40691 2.26401 7.57722 0.48069C6.6645 -0.387133 5.75813 0.00122339 6.34126 0.998501C7.52653 3.07456 8.33783 6.18148 6.70887 10.674C3.02629 20.9968 -3.65433 28.1408 2.50655 40.1608C3.55512 42.0687 4.94338 43.8593 6.63282 45.4828'/%3e%3c/mask%3e%3cpath d='M8.0843 45.0465L10.821 43.8175L10.818 43.8108L10.8149 43.8041L8.0843 45.0465ZM7.97654 35.721L5.1264 34.7847L5.12573 34.7868L7.97654 35.721ZM12.2486 6.23422L14.8329 4.71053L14.8132 4.67725L14.7928 4.6445L12.2486 6.23422ZM7.57722 0.48069L9.67115 -1.66767L9.65785 -1.68064L9.6444 -1.69343L7.57722 0.48069ZM6.34126 0.998501L8.94656 -0.488921L8.93886 -0.502396L8.93103 -0.51579L6.34126 0.998501ZM6.70887 10.674L3.88855 9.6514L3.8859 9.6587L3.88329 9.66602L6.70887 10.674ZM2.50655 40.1608L-0.163201 41.5292L-0.143427 41.5678L-0.122546 41.6058L2.50655 40.1608ZM6.63282 45.4972L4.60165 47.705C5.40161 48.441 6.97433 49.4028 8.78221 48.8321C9.85662 48.493 10.758 47.6363 11.0783 46.4327C11.3598 45.3751 11.0966 44.4312 10.821 43.8175L8.0843 45.0465L5.34761 46.2756C5.29702 46.1629 5.0821 45.6337 5.28021 44.8894C5.51719 43.9991 6.20344 43.3543 6.97598 43.1105C7.62852 42.9045 8.12969 43.0362 8.32333 43.105C8.54946 43.1854 8.65315 43.2795 8.66399 43.2894L6.63282 45.4972ZM8.0843 45.0465L10.8149 43.8041C10.2883 42.6465 9.58971 40.4319 10.8274 36.6553L7.97654 35.721L5.12573 34.7868C3.37168 40.1391 4.27041 43.9081 5.35366 46.2889L8.0843 45.0465ZM7.97654 35.721L10.8267 36.6574C11.6181 34.2484 12.6657 31.9851 13.7697 29.6254C14.8468 27.3233 16.0043 24.8771 16.8214 22.3583C18.5361 17.0735 18.7716 11.3908 14.8329 4.71053L12.2486 6.23422L9.66435 7.7579C12.5837 12.7093 12.3946 16.5607 11.1143 20.5067C10.434 22.6034 9.45151 24.6967 8.33514 27.0827C7.24572 29.4111 6.04639 31.9843 5.1264 34.7847L7.97654 35.721ZM12.2486 6.23422L14.7928 4.6445C13.3827 2.38791 11.6622 0.272887 9.67115 -1.66767L7.57722 0.48069L5.4833 2.62905C7.15165 4.25513 8.56396 5.99873 9.70444 7.82393L12.2486 6.23422ZM7.57722 0.48069L9.6444 -1.69343C9.16717 -2.14718 8.57827 -2.54652 7.89041 -2.78246C7.24346 -3.00437 6.25775 -3.1577 5.2296 -2.72281C4.04242 -2.22066 3.30291 -1.13567 3.17662 0.0596191C3.06763 1.09127 3.425 1.95442 3.75149 2.51279L6.34126 0.998501L8.93103 -0.51579C8.96595 -0.456062 9.21795 -0.0154284 9.14341 0.690039C9.05159 1.55915 8.48638 2.4143 7.56699 2.80318C6.80663 3.1248 6.18221 2.97476 5.94369 2.89295C5.66425 2.7971 5.53092 2.67465 5.51005 2.65481L7.57722 0.48069ZM6.34126 0.998501L3.73596 2.48592C4.49903 3.82249 5.20767 6.01334 3.88855 9.6514L6.70887 10.674L9.5292 11.6966C11.468 6.34962 10.554 2.32664 8.94656 -0.488921L6.34126 0.998501ZM6.70887 10.674L3.88329 9.66602C3.01402 12.1027 1.96679 14.3563 0.900428 16.7062C-0.14312 19.0058 -1.21316 21.415 -1.95935 23.9266C-3.51417 29.1599 -3.6343 34.757 -0.163201 41.5292L2.50655 40.1608L5.17629 38.7925C2.48651 33.5446 2.62626 29.5597 3.79218 25.6353C4.40635 23.5681 5.3119 21.5045 6.36417 19.1857C7.39362 16.9171 8.56244 14.4067 9.53446 11.682L6.70887 10.674ZM2.50655 40.1608L-0.122546 41.6058C1.08285 43.799 2.66261 45.8282 4.55408 47.6459L6.63282 45.4828L8.71155 43.3198C7.22416 41.8904 6.02739 40.3384 5.13564 38.7159L2.50655 40.1608Z' fill='white' mask='url(%23path-1-inside-1_2822_6672)'/%3e%3c/g%3e%3c/svg%3e ");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  @include responsive1699 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive1279 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.adv-item__description {
+  margin-top: auto;
+  max-width: 300px;
+}
+
+.popular-products {
+  .products-slider {
+    .swiper-wrapper {
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        flex: 0 0 20px;
+        width: 20px;
+        height: 1px;
+        pointer-events: none;
+
+        @include responsive1279 {
+          flex-basis: 10px;
+          width: 10px;
+        }
+      }
+    }
+  }
+}
+
+.adv-item--empty {
+  opacity: 0;
+  pointer-events: none;
+
+  @include responsive767 {
+    display: none;
+  }
+}

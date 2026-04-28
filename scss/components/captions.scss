@@ -10,28 +10,31 @@ h6,
   text-transform: uppercase;
 }
 
-// h1,
-// .caption--h1 {
-//   font-size: 44px;
-//   line-height: 120%;
-//   font-weight: 400;
+h1,
+.caption--h1 {
+  font-size: 120px;
+  line-height: 122px;
 
-//   @include responsive1549 {
-//     font-size: 36px;
-//   }
+  @include responsive1699 {
+    font-size: 100px;
+    line-height: 102px;
+  }
 
-//   @include responsive1279 {
-//     font-size: 32px;
-//   }
+  @include responsive1279 {
+    font-size: 80px;
+    line-height: 82px;
+  }
 
-//   @include responsive1023 {
-//     font-size: 30px;
-//   }
+  @include responsive1023 {
+    font-size: 60px;
+    line-height: 62px;
+  }
 
-//   @include responsive767 {
-//     font-size: 24px;
-//   }
-// }
+  @include responsive767 {
+    font-size: 54px;
+    line-height: 56px;
+  }
+}
 
 h2,
 .caption--h2 {
