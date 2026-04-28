@@ -125,6 +125,7 @@ $(document).ready(function () {
         0: {
           slidesPerView: 1,
           spaceBetween: 10,
+          speed: 500,
         },
         768: {
           slidesPerView: 2,
