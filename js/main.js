@@ -273,6 +273,63 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".catalog-main-page__slider").length > 0) {
+    new Swiper(".catalog-main-page__slider", {
+      slidesPerView: 3.62,
+      spaceBetween: 80,
+      navigation: {
+        prevEl: ".catalog-main-page__head .swiperBtnPrev",
+        nextEl: ".catalog-main-page__head .swiperBtnNext",
+      },
+      pagination: {
+        el: ".catalog-main-page__slider .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        375: {
+          slidesPerView: 1.1,
+          spaceBetween: 10,
+        },
+        390: {
+          slidesPerView: 1.15,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 1.4,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 1.8,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2.8,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3.2,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 3.2,
+          spaceBetween: 20,
+        },
+        1440: {
+          slidesPerView: 3.1,
+          spaceBetween: 40,
+        },
+        1700: {
+          slidesPerView: 3.62,
+          spaceBetween: 80,
+        },
+      },
+    });
+  }
+
   if ($(".slider-adv").length > 0) {
     let advSwiper = null;
 

@@ -1,0 +1,64 @@
+.breadcrumbs-block {
+  padding: 40px 0;
+
+  @include responsive1279 {
+    padding: 20px 0;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 48px;
+}
+
+.breadcrumbs li {
+  position: relative;
+  color: #454c52;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+
+  &:not(:last-child) {
+    @include after {
+      right: -28px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #454c52;
+      transform: translateY(-50%);
+      color: $colorGray;
+      opacity: 0.6;
+      font-size: 14px;
+      line-height: 14px;
+      opacity: 0.4;
+    }
+  }
+
+  @include responsive1279 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.breadcrumbs span {
+  opacity: 0.4;
+  font-weight: 400;
+}
+
+.breadcrumbs a {
+  transition:
+    color 0.3s,
+    opacity 0.3s;
+  color: #454c52;
+  font-weight: 400;
+  opacity: 0.4;
+
+  @include hover {
+    opacity: 1;
+    color: $colorOrange;
+  }
+}

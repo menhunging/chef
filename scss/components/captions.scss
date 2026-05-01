@@ -67,32 +67,36 @@ h2,
   }
 }
 
-// h3,
-// .caption--h3 {
-//   font-size: 44px;
-//   line-height: 120%;
-//   font-weight: 400;
+h3,
+.caption--h3 {
+  font-size: 54px;
+  line-height: 56px;
 
-//   @include responsive1549 {
-//     font-size: 30px;
-//   }
+  @include responsive1699 {
+    font-size: 42px;
+    line-height: 44px;
+  }
 
-//   @include responsive1279 {
-//     font-size: 30px;
-//   }
+  @include responsive1279 {
+    font-size: 32px;
+    line-height: 34px;
+  }
 
-//   @include responsive1023 {
-//     font-size: 28px;
-//   }
+  @include responsive1023 {
+    font-size: 28px;
+    line-height: 30px;
+  }
 
-//   @include responsive767 {
-//     font-size: 24px;
-//   }
+  @include responsive767 {
+    font-size: 24px;
+    line-height: 26px;
+  }
 
-//   @include responsive639 {
-//     font-size: 18px;
-//   }
-// }
+  @include responsive639 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 
 // h4,
 // .caption--h4 {

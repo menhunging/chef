@@ -10,6 +10,9 @@
 @import "./components/modals";
 @import "./components/header";
 @import "./components/footer";
+@import "./components/breadcrumbs";
+@import "./components/section-text";
+@import "./components/discount-section";
 
 // HOME PAGE
 @import "blocks/home-page/hero-block.scss";
@@ -23,6 +26,9 @@
 @import "blocks/home-page/contacts-us-main.scss";
 @import "blocks/home-page/docs-section.scss";
 @import "blocks/home-page/faq-section.scss";
+
+// CATALOG-MAIN PAGE
+@import "blocks/catalog-main/catalog-main.scss";
 
 // BLOCKS
 @import "blocks";

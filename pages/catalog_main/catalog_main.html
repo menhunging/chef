@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Каталог товаров</title>
+
+    <link rel="icon" type="image/png" href="../../img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../../img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../../img/favicon/site.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="CHEF" />
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/stylesheet.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="index-page"> <!--  body.index-page только для главной страницы -->
+
+    <div class="site-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="../../img/svg/logo.svg" alt="logo" fetchpriority="high" />
+                        </a>
+                    </div>
+
+                    <nav class="menu">
+
+                        <div class="search-mobile">
+                            <input type="text" placeholder="Поиск..." />
+                            <span class="input-clear"></span>
+                        </div>
+
+                        <ul class="menu__list">
+                            <li>
+                                <a href="#" class="active">Каталог</a>
+                                <div class="menu-sublist">
+                                    <ul class="menu-sublist__list">
+                                        <li><a href="#">Балки</a></li>
+                                        <li><a href="#">Дип-поты</a></li>
+                                        <li><a href="#">Ведра</a></li>
+                                        <li><a href="#">Сашеты и дой-паки</a></li>
+                                        <li><a href="#">Бутылки</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">События</a></li>
+                            <li><a href="#">О бренде</a></li>
+                            <li><a href="#">Сотрудничество</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+
+                        <span class="menu__close"></span>
+
+
+                    </nav>
+
+                    <div class="header-search-block">
+                        <span class="header-search-block__icon"></span>
+                    </div>
+
+                    <div class="header__controls">
+                        <a href="#" class="btn btn--green">Запросить цену</a>
+                    </div>
+
+                    <div class="header-burger">
+                        <div class="header-burger__inner">
+                            <span class="burger__line"></span>
+                            <span class="burger__line"></span>
+                            <span class="burger__line"></span>
+                        </div>
+                    </div>
+
+                    <div class="header-input-search">
+                        <input type="text" placeholder="Поиск..." />
+                        <span class="header-input-search__close"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="breadcrumbs-block">
+                <div class="container">
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Главная</a></li>
+                        <li><span>Каталог</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="catalog-main-page">
+                <div class="container">
+                    <div class="catalog-main-page__head">
+                        <h1 class="caption caption--h2">Каталог товаров</h1>
+
+                        <div class="catalog-main-page__text">
+                            <p>Ключевой фокус нашей работы – безупречное качество, безопасность продукции и надёжная
+                                поддержка партнёров на всех этапах: от разработки рецептуры до внедрения продукта в
+                                производство. </p>
+                            <p>Мы создаём продукты, которые раскрывают весь потенциал вашего бизнеса. Наши ценности –
+                                качество, инновационность и открытость, позволяющие строить долгосрочное и доверительное
+                                сотрудничество. Создавайте импульс для успеха вашего предприятия уже сегодня вместе с
+                                RU-CHEF.</p>
+                        </div>
+
+                        <div class="swiper-controls">
+                            <div class="swiperBtnPrev"></div>
+                            <span class="toh"></span>
+                            <div class="swiperBtnNext"></div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-main-page__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a class="catalog-main-page__item">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <source srcset="../../img/pic-catalog-main1.webp" type="image/webp">
+                                            <img src="../../img/pic-catalog-main1.png" alt="" loading="lazy"
+                                                decoding="async">
+                                        </picture>
+
+                                        <span class="icon-catalog-main icon-balki"></span>
+
+                                    </div>
+                                    <span class="catalog-main-page__item-name">Балки</span>
+                                </a>
+
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a class="catalog-main-page__item">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <source srcset="../../img/pic-catalog-main2.webp" type="image/webp">
+                                            <img src="../../img/pic-catalog-main2.png" alt="" loading="lazy"
+                                                decoding="async">
+                                        </picture>
+
+                                        <span class="icon-catalog-main icon-dippop"></span>
+
+                                    </div>
+                                    <span class="catalog-main-page__item-name">дип-поты</span>
+                                </a>
+
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a class="catalog-main-page__item">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <source srcset="../../img/pic-catalog-main1.webp" type="image/webp">
+                                            <img src="../../img/pic-catalog-main1.png" alt="" loading="lazy"
+                                                decoding="async">
+                                        </picture>
+
+                                        <span class="icon-catalog-main icon-vedra"></span>
+
+                                    </div>
+                                    <span class="catalog-main-page__item-name">Ведра</span>
+                                </a>
+
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a class="catalog-main-page__item">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <source srcset="../../img/pic-catalog-main2.webp" type="image/webp">
+                                            <img src="../../img/pic-catalog-main2.png" alt="" loading="lazy"
+                                                decoding="async">
+                                        </picture>
+
+                                        <span class="icon-catalog-main icon-sahet"></span>
+
+                                    </div>
+                                    <span class="catalog-main-page__item-name">Сашеты и дой-паки</span>
+                                </a>
+
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a class="catalog-main-page__item">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <source srcset="../../img/pic-catalog-main2.webp" type="image/webp">
+                                            <img src="../../img/pic-catalog-main2.png" alt="" loading="lazy"
+                                                decoding="async">
+                                        </picture>
+
+                                        <span class="icon-catalog-main icon-butylki"></span>
+
+                                    </div>
+                                    <span class="catalog-main-page__item-name">Бутылки</span>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-text">
+                <div class="container">
+                    <div class="section-text__inner">
+                        <div class="section-text__head">
+                            <h2 class="caption caption--h3">seo-текст</h2>
+                        </div>
+                        <div class="section-text__body">
+                            <p>Мы работаем в одной из самых динамичных и востребованных отраслей – индустрии питания.
+                            </p>
+                            <p>Сотрудничество с командой RU-CHEF – это доступ к уникальным рецептурам и современным
+                                технологиям производства соусов. Это новые вкусовые решения, которые помогают снижать
+                                издержки, повышать качество готовых блюд и усиливать ценность вашего предложения для
+                                клиента. Ключевой фокус нашей работы – безупречное качество, безопасность продукции и
+                                надёжная поддержка партнёров на всех этапах: от разработки рецептуры до внедрения
+                                продукта
+                                в производство.</p>
+                            <p>Точные, технологичные и, главное, вкусные решения, а тмакже особое внимание к вашим
+                                задачам –
+                                то, что отличает RU-CHEF. Мы создаём продукты, которые раскрывают весь потенциал вашего
+                                бизнеса. Наши ценности – качество, инновационность и открытость, позволяющие строить
+                                долгосрочное и доверительное сотрудничество.</p>
+                            <p>Создавайте импульс для успеха вашего предприятия уже сегодня вместе с RU-CHEF.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="discount-section">
+                <div class="container">
+                    <div class="discount-section__inner">
+                        <span class="discount-section__title">скидка до <span class="persent">20%!</span></span>
+                        <span class="discount-section__desc">на Сезонные соусы для вашего меню</span>
+                        <p class="discount-section__text">
+                            Пополните ассортимент ресторана новыми вкусами по выгодной цене. Только до конца месяца
+                            действуют специальные условия на всю линейку сезонных соусов.
+                        </p>
+
+                        <div class="discount-section__controls">
+                            <a href="#" class="btn btn--white btn--down">Скачать каталог</a>
+                            <a href="#" class="btn btn--green-full">Связаться</a>
+                        </div>
+                    </div>
+
+                    <div class="picture-block">
+                        <picture>
+                            <source srcset="../../img/pic-discount1.webp" type="image/webp" />
+                            <img src="../../img/pic-discount1.jpg" alt="" loading="lazy" />
+                        </picture>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="../../img/svg/logo_footer.svg" alt="logo" />
+                        </a>
+                    </div>
+
+                    <div class="footer__menu">
+                        <ul>
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">События</a></li>
+                            <li><a href="#">О бренде</a></li>
+                            <li><a href="#">Сотрудничество</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__info">
+                        <a href="#" class="footer__phone">+7 (495) 540-48-85</a>
+                        <a href="#" class="footer__mail">info@ru-chef.com</a>
+                        <span class="footer__adress">Москва, ул. 9-я Парковая, 39</span>
+
+                        <div class="social">
+                            <ul class="social__list">
+                                <li class="social__item">
+                                    <a href="#" target="_blank">
+                                        <img src="../../img/svg/max.svg" alt="max" />
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" target="_blank">
+                                        <img src="../../img/svg/vk.svg" alt="vk" />
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#" target="_blank">
+                                        <img src="../../img/svg/tegram.svg" alt="tegram" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__right">
+                        <a href="#" class="btn btn--green">Запросить цену</a>
+                    </div>
+
+                    <div class="footer__bottom">
+
+                        <div class="footer__req">
+                            ООО «РУ-ШЕФ» <br /><br />
+                            ИНН 5074066580 КПП 507401001 <br />
+                            ОГРН 1205000096730
+                        </div>
+
+                        <span class="coryRight">&copy; <span class="thisYear"></span> RU-CHEF QUICK&PRO</span>
+
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Обработка персональных данных</a>
+
+                        <div class="developer"><span>Разработано — </span>
+                            <a href="https://internet-team.ru/" target="_blank">студией «Internet Team»</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="overlay"></div>
+
+</body>
+
+<script src="../../libs/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../libs/swiper/swiper-bundle.min.js"></script>
+<script src="../../libs/selectric/jquery.selectric.min.js"></script>
+<script src="../../libs/micromodal/micromodal.min.js"></script>
+<script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
+<script src="../../libs/fancybox/fancybox.umd.js"></script>
+<script src="../../libs/aos/aos.js"></script>
+<script src="../../js/main.js"></script>
+
+</html>
