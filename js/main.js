@@ -309,49 +309,102 @@ $(document).ready(function () {
     $(".thisYear").text(date.getFullYear());
   }
 
+  if ($(".header-burger").length > 0) {
+    const burger = $(".header-burger");
+    const body = $("body");
+    const overlay = $(".overlay");
+    const menu = $(".menu");
+    const close = $(".menu__close");
+
+    const openMenu = function () {
+      burger.addClass("opened");
+      menu.addClass("opened");
+      overlay.addClass("visible");
+      body.addClass("is-openMenu");
+    };
+
+    const closeMenu = function () {
+      burger.removeClass("opened");
+      menu.removeClass("opened");
+      overlay.removeClass("visible");
+      body.removeClass("is-openMenu");
+    };
+
+    burger.on("click", function () {
+      burger.hasClass("opened") ? closeMenu() : openMenu();
+    });
+
+    close.on("click", closeMenu);
+    overlay.on("click.menuOverlay", closeMenu);
+
+    $(window).on("resize.menuOverlay", function () {
+      if ($(window).width() < 1280) closeMenu();
+    });
+  }
+
+  if ($(".header-search-block").length > 0) {
+    const searchIcon = $(".header-search-block");
+    const searchBlock = $(".header-input-search");
+    const searchClose = $(".header-input-search__close");
+    const searchInput = searchBlock.find("input");
+
+    const openSearchBlock = function () {
+      searchIcon.addClass("opened");
+      searchBlock.addClass("opened");
+    };
+
+    const closeSearchBlock = function () {
+      searchIcon.removeClass("opened");
+      searchBlock.removeClass("opened");
+    };
+
+    searchIcon.on("click", function () {
+      searchIcon.hasClass("opened") ? closeSearchBlock() : openSearchBlock();
+    });
+
+    searchClose.on("click", function () {
+      searchInput.val("").trigger("input");
+      closeSearchBlock();
+    });
+
+    $(document).on("click.searchOutside", function (e) {
+      const target = $(e.target);
+      const clickInsideSearchIcon =
+        target.closest(".header-search-block").length > 0;
+      const clickInsideSearchBlock =
+        target.closest(".header-input-search").length > 0;
+
+      if (!clickInsideSearchIcon && !clickInsideSearchBlock) {
+        closeSearchBlock();
+      }
+    });
+  }
+
+  if ($(".search-mobile").length > 0) {
+    $(".search-mobile").each(function () {
+      const searchMobileBlock = $(this);
+      const searchMobileInput = searchMobileBlock.find("input");
+      const searchMobileClear = searchMobileBlock.find(".input-clear");
+
+      const toggleMobileClear = function () {
+        if (searchMobileInput.val().trim().length > 0) {
+          searchMobileClear.addClass("is-visible");
+        } else {
+          searchMobileClear.removeClass("is-visible");
+        }
+      };
+
+      searchMobileInput.on("input", toggleMobileClear);
+
+      searchMobileClear.on("click", function () {
+        searchMobileInput.val("").trigger("input").focus();
+      });
+
+      toggleMobileClear();
+    });
+  }
+
   // base
-
-  // if ($(".burger-menu").length > 0) {
-  //   let burger = $(".burger-menu");
-  //   let body = $("body");
-  //   let overlay = $(".overlay");
-  //   let menu = $(".menu-invis");
-  //   let close = $(".menu-invis__close");
-
-  //   close.on("click", function () {
-  //     handleClick();
-  //   });
-
-  //   burger.on("click", function () {
-  //     handleClick();
-  //   });
-
-  //   function handleClick() {
-  //     if (burger.hasClass("opened")) {
-  //       closeMenu();
-  //     } else {
-  //       burger.addClass("opened");
-  //       menu.addClass("opened");
-  //       overlay.addClass("visible");
-  //       body.addClass("is-openMenu");
-  //       overlay.on("click", function () {
-  //         closeMenu();
-  //       });
-  //     }
-  //   }
-
-  //   function closeMenu() {
-  //     burger.removeClass("opened");
-  //     menu.removeClass("opened");
-  //     overlay.removeClass("visible");
-  //     body.removeClass("is-openMenu");
-  //     overlay.off("click");
-  //   }
-
-  //   $(window).resize(function () {
-  //     $(window).width() < 1280 && closeMenu();
-  //   });
-  // }
 
   // if ($(".grettings-main-slider").length > 0) {
   //   const swiper = new Swiper(".grettings-main-slider", {

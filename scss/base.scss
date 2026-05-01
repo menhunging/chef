@@ -7,6 +7,7 @@ body {
   font-weight: 400;
   font-variant-ligatures: none;
 
+  &.is-openMenu,
   &.modal-open,
   &.hidden {
     overflow: hidden;
@@ -1187,7 +1188,7 @@ section {
 }
 
 .overlay {
-  background-color: #edeadf;
+  background-color: rgba($colorBeige, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -1196,10 +1197,16 @@ section {
   z-index: 10;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
+  backdrop-filter: blur(0);
+  transition:
+    opacity 0.3s,
+    background-color 0.3s,
+    backdrop-filter 0.3s;
 
   &.visible {
     pointer-events: initial;
-    opacity: 0.9;
+    opacity: 1;
+    background-color: rgba($colorBeige, 0.55);
+    backdrop-filter: blur(10px);
   }
 }
