@@ -47,7 +47,7 @@
       bottom: 0;
       left: 0;
       right: auto;
-      top:auto;
+      top: auto;
     }
   }
 }
@@ -80,6 +80,11 @@
     padding: 30px;
     min-height: 790px;
   }
+
+  @include responsive374{
+    padding: 20px;
+    min-height: 750px;
+  }
 }
 
 .discount-section__title {
@@ -106,8 +111,13 @@
   @include responsive767 {
     font-size: 36px;
     line-height: 55px;
-    max-width: 80%;
     min-height: initial;
+    max-width: 230px;
+  }
+
+  @include responsive374 {
+    font-size: 30px;
+    line-height: 40px;
   }
 
   .persent {
@@ -116,8 +126,14 @@
     padding: 7px 20px;
 
     @include responsive767 {
-      padding: 5px 15px;
+      padding: 5px 10px;
       margin-top: 5px;
+    }
+
+    @include responsive374 {
+      line-height: 30px;
+      font-size: 30px;
+      padding: 2px 10px;
     }
   }
 }
@@ -211,6 +227,12 @@
 
     @include responsive767 {
       height: 80px;
+    }
+
+    @include responsive374 {
+      font-size: 16px;
+      line-height: 18px;
+      height: 70px;
     }
 
     &.btn--down {

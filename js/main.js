@@ -461,7 +461,7 @@ $(document).ready(function () {
     });
   }
 
-  // base
+  // TODO удалить потом base
 
   // if ($(".grettings-main-slider").length > 0) {
   //   const swiper = new Swiper(".grettings-main-slider", {
