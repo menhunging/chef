@@ -13,6 +13,7 @@
 @import "./components/breadcrumbs";
 @import "./components/section-text";
 @import "./components/discount-section";
+@import "./components/pagination";
 
 // HOME PAGE
 @import "blocks/home-page/hero-block.scss";
@@ -29,6 +30,9 @@
 
 // CATALOG-MAIN PAGE
 @import "blocks/catalog-main/catalog-main.scss";
+
+// CATALOG PAGE
+@import "blocks/catalog/catalog.scss";
 
 // BLOCKS
 @import "blocks";

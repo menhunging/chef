@@ -1,0 +1,362 @@
+.catalog {
+  padding: 0;
+  padding-bottom: 200px;
+
+  @include responsive1699 {
+    padding-bottom: 100px;
+  }
+
+  @include responsive767 {
+    padding-bottom: 80px;
+  }
+}
+
+.catalog__inner {
+}
+
+.catalog__head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .caption {
+    margin-bottom: 20px;
+
+    @include responsive1279 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.catalog__body {
+  margin-top: 120px;
+
+  @include responsive1699 {
+    margin-top: 80px;
+  }
+
+  @include responsive1279 {
+    margin-top: 60px;
+  }
+
+  @include responsive767 {
+    margin-top: 40px;
+  }
+}
+
+.catalog__categories {
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+
+  @include responsive1279 {
+    width: calc(100% + 30px);
+    transform: translateX(-15px);
+    padding: 0 15px;
+  }
+
+  @include responsive767 {
+    gap: 0;
+  }
+
+  .tabList__link {
+    padding: 12px 30px;
+    white-space: nowrap;
+
+    @include responsive1279 {
+      padding: 8px 20px;
+    }
+
+    @include responsive767 {
+      padding: 6px 20px;
+    }
+  }
+}
+
+.catalog__contriols {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  left: -15px;
+  position: relative;
+  width: calc(100% + 30px);
+  padding: 0 15px;
+
+  &.visible {
+    overflow: visible;
+  }
+
+  @include responsive767 {
+    margin-top: 30px;
+  }
+}
+
+.cataslog__filter-reset {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  border: solid 3px #454c52;
+  position: relative;
+  border-radius: 30px;
+  height: 60px;
+  padding: 0 60px 0 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
+  cursor: pointer;
+
+  @include before {
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.4605 1.06055L8.26055 8.26055M8.26055 8.26055L1.06055 1.06055M8.26055 8.26055L15.4605 15.4605M8.26055 8.26055L1.06055 15.4605' stroke='%23454C52' stroke-width='3'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  @include hover {
+    background-color: #454c52;
+    color: $colorWhite;
+
+    &::before {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  @include responsive1699 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include responsive1023 {
+    font-size: 14px;
+    line-height: 16px;
+    height: 50px;
+  }
+
+  @include responsive767 {
+    height: 40px;
+  }
+}
+
+.catalog__selected-list {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: auto;
+  position: relative;
+  left: -15px;
+  width: calc(100% + 30px);
+  padding: 0 15px;
+}
+
+.catalog__selected {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  border: solid 3px $colorOrange;
+  background-color: $colorOrange;
+  position: relative;
+  border-radius: 30px;
+  height: 60px;
+  padding: 0 60px 0 30px;
+  color: $colorWhite;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    color 0.3s,
+    border 0.3s,
+    background-color 0.3s;
+  cursor: pointer;
+
+  @include before {
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.4605 1.06055L8.26055 8.26055M8.26055 8.26055L1.06055 1.06055M8.26055 8.26055L15.4605 15.4605M8.26055 8.26055L1.06055 15.4605' stroke='%23454C52' stroke-width='3'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    filter: brightness(0) invert(1);
+
+    @include responsive767 {
+      width: 10px;
+      height: 10px;
+      background-size: contain;
+      right: 15px;
+    }
+  }
+
+  @include hover {
+    background-color: #454c52;
+    border-color: #454c52;
+    color: $colorWhite;
+  }
+
+  @include responsive1699 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include responsive1023 {
+    font-size: 14px;
+    line-height: 16px;
+    height: 50px;
+  }
+
+  @include responsive767 {
+    height: 40px;
+    padding: 0 40px 0 15px;
+    gap: 10px;
+  }
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+
+  @include responsive1699 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  @include responsive1279 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive767 {
+    margin-top: 20px;
+    gap: 7px;
+  }
+
+  @include responsive767 {
+    gap: 5px 3px;
+  }
+
+  .catalog-item {
+    .product-item {
+      @include responsive1699 {
+        padding: 30px 20px 20px;
+      }
+
+      @include responsive767 {
+        padding: 20px 20px 10px;
+        border-radius: 20px;
+      }
+
+      @include responsive374 {
+        padding: 10px 5px 10px;
+      }
+
+      .picture-block {
+        @include responsive767 {
+          width: 129px;
+          height: 129px;
+        }
+      }
+    }
+
+    .product-item__content {
+      @include responsive1699 {
+        padding: 0;
+      }
+
+      .product-item__name {
+        @include responsive767 {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+
+      .product-item__description {
+        @include responsive767 {
+          font-size: 9px;
+          line-height: 10px;
+        }
+      }
+
+      p {
+        @include responsive767 {
+          font-siz: 8px;
+          line-height: 10px;
+        }
+      }
+
+      .btn {
+        @include responsive1699 {
+          width: 100%;
+          margin-left: 0px;
+          margin-right: 0;
+          padding-left: 0;
+          transition: all 0.3s;
+
+          @include hover {
+            padding-left: 30px;
+          }
+        }
+
+        @include responsive767 {
+          font-size: 10px;
+          line-height: 12px;
+          height: 26px;
+          margin-top: 0;
+
+          &:before {
+            width: 26px;
+            height: 26px;
+            border-width: 2px;
+          }
+
+          &:after {
+            width: 26px;
+            height: 26px;
+            background-size: 5px;
+            right: -24px;
+            top: -2px;
+          }
+        }
+      }
+    }
+
+    .product-item__price {
+      @include responsive767 {
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 10px;
+        min-height: 26px;
+      }
+    }
+
+    .product-item__price.not-price {
+      @include responsive767 {
+        height: 26px;
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+
+    .product-item__price.not-price {
+      @include responsive1699 {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}

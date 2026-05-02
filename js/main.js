@@ -461,6 +461,182 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".select-block").length > 0) {
+    const selectBlocks = $(".select-block");
+    const controlsBlocks = $(".catalog__contriols");
+    let isAutoScrollingControls = false;
+
+    const getSelectList = function (selectBlock) {
+      return (
+        selectBlock.data("selectList") ||
+        selectBlock.find(".select-block__list")
+      );
+    };
+
+    const restoreListToBlock = function (selectBlock) {
+      const selectList = getSelectList(selectBlock);
+
+      if (
+        !selectList ||
+        selectList.length === 0 ||
+        !selectList.hasClass("is-floating")
+      ) {
+        return;
+      }
+
+      selectList
+        .removeClass("is-floating")
+        .removeAttr("style")
+        .appendTo(selectBlock);
+    };
+
+    const moveListToBody = function (selectBlock) {
+      const selectList = getSelectList(selectBlock);
+      const blockRect = selectBlock[0].getBoundingClientRect();
+
+      selectList
+        .appendTo("body")
+        .addClass("is-floating")
+        .css({
+          position: "fixed",
+          top: `${Math.round(blockRect.bottom - 2)}px`,
+          left: `${Math.round(blockRect.left)}px`,
+          width: `${Math.round(blockRect.width)}px`,
+          zIndex: 5,
+          margin: 0,
+        });
+    };
+
+    const openSelectBlock = function (selectBlock) {
+      const selectList = getSelectList(selectBlock);
+      selectBlock.addClass("is-open");
+      moveListToBody(selectBlock);
+      selectList.stop().slideDown(180);
+    };
+
+    const scrollControlsToBlockLeft = function (selectBlock, callback) {
+      const controls = selectBlock.closest(".catalog__contriols");
+
+      if (!controls.length) {
+        if (typeof callback === "function") {
+          callback();
+        }
+        return;
+      }
+
+      const controlsElement = controls[0];
+      const controlsRect = controlsElement.getBoundingClientRect();
+      const blockRect = selectBlock[0].getBoundingClientRect();
+      const currentScrollLeft = controls.scrollLeft();
+      const maxScrollLeft =
+        controlsElement.scrollWidth - controlsElement.clientWidth;
+      const leftOffset = 15;
+      const targetScrollLeft = Math.max(
+        0,
+        Math.min(
+          currentScrollLeft +
+            (blockRect.left - (controlsRect.left + leftOffset)),
+          maxScrollLeft,
+        ),
+      );
+
+      if (Math.abs(targetScrollLeft - currentScrollLeft) < 1) {
+        if (typeof callback === "function") {
+          callback();
+        }
+        return;
+      }
+
+      isAutoScrollingControls = true;
+      controls
+        .stop(true)
+        .animate({ scrollLeft: targetScrollLeft }, 220, function () {
+          if (typeof callback === "function") {
+            callback();
+          }
+
+          requestAnimationFrame(function () {
+            isAutoScrollingControls = false;
+          });
+        });
+    };
+
+    const closeAllSelectBlocks = function (block) {
+      selectBlocks.each(function () {
+        const currentBlock = $(this);
+        const currentList = getSelectList(currentBlock);
+
+        if (block && currentBlock.is(block)) {
+          return;
+        }
+
+        currentBlock.removeClass("is-open");
+
+        if (currentList.hasClass("is-floating")) {
+          currentList.stop().slideUp(180, function () {
+            restoreListToBlock(currentBlock);
+          });
+        } else {
+          currentList.stop().slideUp(180);
+        }
+      });
+    };
+
+    selectBlocks.each(function () {
+      const selectBlock = $(this);
+      const selectList = selectBlock.find(".select-block__list");
+      selectBlock.data("selectList", selectList);
+
+      selectBlock.on("click", function (e) {
+        if ($(e.target).closest(".select-block__item").length > 0) {
+          return;
+        }
+
+        if (selectBlock.hasClass("is-open")) {
+          closeAllSelectBlocks();
+        } else {
+          closeAllSelectBlocks(selectBlock);
+          scrollControlsToBlockLeft(selectBlock, function () {
+            openSelectBlock(selectBlock);
+          });
+        }
+      });
+
+      selectBlock.find(".select-block__item a").on("click", function (e) {
+        e.preventDefault();
+
+        // TODO удалить потом если не нужно менять текст в селекте
+
+        // const selectedText = $(this).text().trim();
+        // selectData.text(selectedText);
+
+        closeAllSelectBlocks();
+      });
+    });
+
+    $(document).on("click.selectBlock", function (e) {
+      const target = $(e.target);
+
+      if (
+        target.closest(".select-block").length === 0 &&
+        target.closest(".select-block__list.is-floating").length === 0
+      ) {
+        closeAllSelectBlocks();
+      }
+    });
+
+    controlsBlocks.on("scroll.selectBlock", function () {
+      if (isAutoScrollingControls) {
+        return;
+      }
+      closeAllSelectBlocks();
+    });
+
+    $(window).on("resize.selectBlock scroll.selectBlock", function () {
+      closeAllSelectBlocks();
+    });
+  }
+
   // TODO удалить потом base
 
   // if ($(".grettings-main-slider").length > 0) {
@@ -555,32 +731,6 @@ $(document).ready(function () {
   //   }
 
   //   sliders.length && sliderinit();
-  // }
-
-  // if ($(".sort-block").length > 0) {
-  //   $(".sort-block").on("click", function () {
-  //     if ($(this).hasClass("opened")) {
-  //       $(this)
-  //         .removeClass("opened")
-  //         .find(".sort-block__list")
-  //         .stop()
-  //         .slideUp();
-  //     } else {
-  //       let self = $(this);
-
-  //       self.addClass("opened").find(".sort-block__list").stop().slideDown();
-
-  //       $(document).mouseup(function (e) {
-  //         if (!self.is(e.target) && self.has(e.target).length === 0) {
-  //           self
-  //             .removeClass("opened")
-  //             .find(".sort-block__list")
-  //             .stop()
-  //             .slideUp();
-  //         }
-  //       });
-  //     }
-  //   });
   // }
 
   // if ($(".tabs").length > 0) {

@@ -81,7 +81,7 @@
     min-height: 790px;
   }
 
-  @include responsive374{
+  @include responsive374 {
     padding: 20px;
     min-height: 750px;
   }
@@ -265,6 +265,106 @@
           filter: brightness(0) invert(0);
         }
       }
+    }
+  }
+}
+
+.discount-section--dark {
+  color: $colorGray;
+  background-color: $colorBeige;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1071' height='625' viewBox='0 0 1071 625' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cellipse cx='646.679' cy='647.5' rx='647.038' ry='647.5' fill='%23F1EAE2'/%3e%3c/svg%3e ");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 65%;
+
+  @include responsive767 {
+    padding-top: 280px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='303' height='332' viewBox='0 0 303 332' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cellipse cx='251.5' cy='251.5' rx='251.5' ry='251.5' transform='matrix(4.37114e-08 -1 -1 -4.37114e-08 303 332)' fill='%23F1EAE2'/%3e%3c/svg%3e ");
+    background-position: left top;
+    background-size: 95%;
+  }
+
+  .discount-section__inner {
+    @include responsive767 {
+      min-height: initial;
+    }
+  }
+
+  .discount-section__title {
+    max-width: 1024px;
+
+    @include responsive1279 {
+      max-width: 490px;
+    }
+
+    @include responsive767 {
+      max-width: 100%;
+      font-size: 30px;
+      line-height: 32px;
+    }
+
+    @include responsive374 {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+
+  .picture-block {
+    border-radius: 0;
+
+    @include responsive1023 {
+      width: 100%;
+      right: -250px;
+    }
+
+    @include responsive767 {
+      right: 0;
+      top: 0;
+      bottom: auto;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  .discount-section__desc {
+    @include responsive1279 {
+      max-width: 310px;
+    }
+
+    @include responsive374 {
+      font-size: 14px;
+      line-height: 16px;
+      max-width: 200px;
+    }
+  }
+
+  .discount-section__controls {
+    .btn--down {
+      color: $colorBlack;
+
+      &::before {
+        filter: brightness(0) invert(0);
+      }
+
+      @include hover {
+        color: $colorWhite;
+
+        &::before {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+
+  & + * {
+    margin-top: 200px;
+
+    @include responsive1699 {
+      margin-top: 100px;
+    }
+
+    @include responsive767 {
+      margin-top: 80px;
     }
   }
 }

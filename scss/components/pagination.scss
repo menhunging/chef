@@ -1,0 +1,134 @@
+.pagination {
+  margin-top: 60px;
+
+  @include responsive1279 {
+    margin-top: 30px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pagination__link {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    transition: all 0.3s;
+    border-radius: 50%;
+    border: solid 3px $colorBeige;
+
+    @include responsive1279 {
+      width: 50px;
+      height: 50px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include responsive767 {
+      width: 40px;
+      height: 40px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    @include responsive374 {
+      width: 30px;
+      height: 30px;
+    }
+
+    &.active {
+      background-color: $colorOrange;
+      color: $colorWhite;
+      border-color: $colorOrange;
+    }
+  }
+
+  a.pagination__link {
+    cursor: pointer;
+
+    @include hover {
+      border-color: $colorOrange;
+    }
+  }
+}
+
+.pagination__prev,
+.pagination__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  transition: background-color 0.3s;
+  background-color: #f1eae2;
+  border-radius: 50%;
+  position: relative;
+
+  @include responsive1279 {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 16px;
+
+    &::before {
+      background-size: 10px;
+    }
+  }
+
+  @include responsive767 {
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    line-height: 12px;
+
+    &::before {
+      background-size: 5px;
+    }
+  }
+
+  @include responsive374 {
+    width: 30px;
+    height: 30px;
+  }
+
+  @include before {
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 12px;
+    height: 18px;
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  @include hover {
+    background-color: $colorOrange;
+
+    &::before {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.pagination__next {
+  &::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='18' viewBox='0 0 12 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.41406 1.41406L8.61406 8.61406L1.41406 15.8141' stroke='%23454C52' stroke-width='4'/%3e%3c/svg%3e ");
+  }
+}
+
+.pagination__prev {
+  &:before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='18' viewBox='0 0 12 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.0283 1.41406L2.82832 8.61406L10.0283 15.8141' stroke='%23454C52' stroke-width='4'/%3e%3c/svg%3e ");
+  }
+}
