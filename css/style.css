@@ -8538,8 +8538,8 @@ h4,
   background-size: 20%;
 }
 .card-block__slider .icon-rf {
-  background-image: url("../../../img/icon-rf.png");
-  background-image: image-set(url("../../../img/icon-rf.webp") type("image/webp"), url("../../../img/icon-rf.png") type("image/png"));
+  background-image: url("../img/icon-rf.png");
+  background-image: image-set(url("../img/icon-rf.webp") type("image/webp"), url("../img/icon-rf.png") type("image/png"));
   width: 120px;
   height: 120px;
   position: absolute;
@@ -8872,7 +8872,7 @@ h4,
   left: 0;
   flex: 1;
   height: 18px;
-  background-image: url("../../../img/svg/toh.svg");
+  background-image: url("../img/svg/toh.svg");
   background-position: bottom;
   background-repeat: repeat-x;
   order: 2;
@@ -9162,6 +9162,10 @@ h4,
   text-transform: uppercase;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1900' height='360' viewBox='0 0 1900 360' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.1' clip-path='url(%23clip0_2822_5693)'%3e%3cpath d='M1690 180C1690 279.411 1770.59 360 1870 360C1969.41 360 2050 279.411 2050 180C2050 80.5887 1969.41 0 1870 0C1770.59 0 1690 80.5887 1690 180ZM1949.61 180C1949.61 223.97 1913.97 259.615 1870 259.615C1826.03 259.615 1790.39 223.97 1790.39 180C1790.39 136.03 1826.03 100.385 1870 100.385C1913.97 100.385 1949.61 136.03 1949.61 180Z' fill='white'/%3e%3ccircle cx='180' cy='180' r='180' transform='matrix(-1 0 0 1 1690 0)' fill='white'/%3e%3cpath d='M970 180C970 279.411 1050.59 360 1150 360C1249.41 360 1330 279.411 1330 180C1330 80.5887 1249.41 0 1150 0C1050.59 0 970 80.5887 970 180ZM1229.61 180C1229.61 223.97 1193.97 259.615 1150 259.615C1106.03 259.615 1070.39 223.97 1070.39 180C1070.39 136.03 1106.03 100.385 1150 100.385C1193.97 100.385 1229.61 136.03 1229.61 180Z' fill='white'/%3e%3ccircle cx='180' cy='180' r='180' transform='matrix(-1 0 0 1 970 0)' fill='white'/%3e%3cpath d='M250 180C250 279.411 330.589 360 430 360C529.411 360 610 279.411 610 180C610 80.5887 529.411 0 430 0C330.589 0 250 80.5887 250 180ZM509.615 180C509.615 223.97 473.97 259.615 430 259.615C386.03 259.615 350.385 223.97 350.385 180C350.385 136.03 386.03 100.385 430 100.385C473.97 100.385 509.615 136.03 509.615 180Z' fill='white'/%3e%3ccircle cx='180' cy='180' r='180' transform='matrix(-1 0 0 1 250 0)' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_2822_5693'%3e%3crect width='2880' height='360' fill='white' transform='matrix(-1 0 0 1 2770 0)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
   background-position: center;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 @media (max-width: 1699px) {
   .request-price {
