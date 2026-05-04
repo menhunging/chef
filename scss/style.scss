@@ -33,6 +33,16 @@
 
 // CATALOG PAGE
 @import "blocks/catalog/catalog.scss";
+@import "blocks/catalog/quick-view.scss";
+
+// CARD PAGE
+@import "blocks/card-page/card-block.scss";
+@import "blocks/card-page/card-characteristics.scss";
+@import "blocks/card-page/serve-with.scss";
+@import "blocks/card-page/video-recipes.scss";
+@import "blocks/card-page/gallery-photo.scss";
+@import "blocks/card-page/request-price.scss";
+@import "blocks/card-page/cases-section.scss";
 
 // BLOCKS
 @import "blocks";

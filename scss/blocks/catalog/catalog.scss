@@ -360,3 +360,28 @@
     }
   }
 }
+
+.quick-view-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  color: $colorWhite;
+  padding: 12px 24px;
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  background-color: $colorWhite-a4;
+  z-index: 5;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    background-color 0.3s;
+
+  @include hover {
+    background-color: $colorOrange;
+  }
+}

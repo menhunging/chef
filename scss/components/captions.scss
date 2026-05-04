@@ -98,28 +98,28 @@ h3,
   }
 }
 
-// h4,
-// .caption--h4 {
-//   font-size: 30px;
-//   line-height: 120%;
+h4,
+.caption--h4 {
+  font-size: 24px;
+  line-height: 26px;
 
-//   @include responsive1549 {
-//     font-size: 28px;
-//   }
+  @include responsive1549 {
+    font-size: 22px;
+    line-height: 24px;
+  }
 
-//   @include responsive1279 {
-//     font-size: 24px;
-//   }
+  @include responsive1279 {
+    font-size: 20px;
+    line-height: 22px;
+  }
 
-//   @include responsive767 {
-//     font-size: 22px;
-//   }
+  @include responsive1023 {
+    font-size: 18px;
+    line-height: 20px;
+  }
 
-//   @include responsive479 {
-//     font-size: 18px;
-//   }
-
-//   @include responsive374 {
-//     font-size: 15px;
-//   }
-// }
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

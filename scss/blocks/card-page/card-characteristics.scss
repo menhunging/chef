@@ -1,0 +1,107 @@
+.card-characteristics {
+}
+
+.card-characteristics__title {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  display: block;
+
+  @include responsive1699 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @include responsive1279 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.card-characteristics__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  display: grid;
+  gap: 20px 30px;
+  grid-template-columns: 1fr 1fr;
+
+  @include responsive1699 {
+    gap: 10px 20px;
+  }
+
+  @include responsive767 {
+    grid-template-columns: 1fr;
+  }
+
+  & + * {
+    margin-top: 40px;
+
+    @include responsive1279 {
+      margin-top: 20px;
+    }
+  }
+}
+
+.card-characteristics__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 18px;
+  gap: 5px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    flex: 1;
+    height: 18px;
+    background-image: url("../../../img/svg/toh.svg");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    order: 2;
+  }
+}
+
+.card-characteristics__item-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  order: 1;
+
+  @include responsive1699 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include responsive767 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.card-characteristics__item-value {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 18px;
+  order: 3;
+
+  @include responsive1699 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include responsive767 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

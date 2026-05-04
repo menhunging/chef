@@ -97,6 +97,17 @@
     }
   }
 
+  &--white-full {
+    background-color: $colorWhite;
+    border-color: $colorWhite;
+    color: $colorGreen;
+
+    @include hover {
+      background-color: transparent;
+      color: $colorWhite;
+    }
+  }
+
   &:disabled {
     opacity: 0.5;
     pointer-events: none;

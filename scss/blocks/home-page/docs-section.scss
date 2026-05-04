@@ -17,6 +17,14 @@
   @include responsive374 {
     padding: 60px 0;
   }
+
+  .caption {
+    margin-bottom: 60px;
+
+    @include responsive767 {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .docs-slider {
@@ -25,16 +33,22 @@
   .swiper-wrapper {
     overflow: visible;
   }
+
+  .swiper-slide {
+    height: auto;
+  }
 }
 
 .doc-item {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 24px;
   border: solid 5px $colorBeige;
   border-radius: 50px;
   padding: 40px;
+  height: 100%;
 
   @include responsive1699 {
     padding: 30px;

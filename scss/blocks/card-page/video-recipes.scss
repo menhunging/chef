@@ -1,0 +1,101 @@
+.video-recipes {
+}
+
+.video-recipes__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 20px;
+
+  @include responsive1699 {
+    gap: 40px 20px;
+  }
+
+  @include responsive1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive767 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+.video-recipes__item {
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  padding-left: 80px;
+
+  @include responsive1699 {
+    font-size: 22px;
+    line-height: 24px;
+    gap: 5px;
+    padding-left: 70px;
+  }
+
+  @include responsive1279 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive1023 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+    min-height: 60px;
+  }
+
+  @include hover {
+    &::before {
+      transform: scale(1.1);
+    }
+  }
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M59.4327 34C57.2239 50.2931 42.2251 61.7106 25.9321 59.5018C9.63902 57.293 -1.77852 42.2943 0.430286 26.0012C2.63909 9.70814 17.6378 -1.70941 33.9309 0.499401C50.2239 2.70821 61.6415 17.7069 59.4327 34ZM5.15048 26.6411C3.29508 40.3273 12.8858 52.9262 26.572 54.7816C40.2582 56.637 52.8571 47.0463 54.7125 33.3601C56.5679 19.6739 46.9772 7.07499 33.291 5.21959C19.6048 3.3642 7.00588 12.9549 5.15048 26.6411Z' fill='%23FF8B3C'/%3e%3cpath d='M38.9533 29.4202L26.1157 22.2882C25.6747 22.0432 25.1328 22.3621 25.1328 22.8666V37.1305C25.1328 37.635 25.6747 37.9538 26.1157 37.7088L38.9533 30.5769C39.407 30.3248 39.407 29.6723 38.9533 29.4202Z' fill='%23FF8B3C'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: 0;
+
+    @include responsive1699 {
+      width: 50px;
+      height: 50px;
+      top: -5px;
+    }
+
+    @include responsive767 {
+    }
+  }
+}
+
+.video-recipes__name {
+  font-weight: 900;
+}
+
+.video-recipes__time {
+  font-weight: 400;
+  opacity: 0.6;
+
+  @include responsive1699 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include responsive1279 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

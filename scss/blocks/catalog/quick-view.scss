@@ -1,0 +1,475 @@
+.quick-view {
+  background-color: $colorWhite;
+  padding: 60px;
+  border-radius: 80px;
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+
+  @include responsive1699 {
+    padding: 30px;
+  }
+
+  @include responsive767 {
+    padding: 10px;
+    border-radius: 40px;
+  }
+
+  .product-item__price {
+    height: 80px;
+    width: 100%;
+    left: 0;
+    margin-top: 10px;
+
+    &.not-price {
+      border-radius: 60px;
+      background-color: $colorGreen;
+      color: $colorWhite;
+    }
+
+    @include responsive1279 {
+      height: 60px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      height: 50px;
+    }
+
+    @include hover {
+      background-color: transparent;
+      color: $colorGray;
+    }
+  }
+
+  .btn--more {
+    padding-left: 0;
+
+    @include hover {
+      padding-left: 40px;
+    }
+  }
+
+  .product-item__status {
+    position: relative;
+    margin-bottom: 10px;
+    top: auto;
+    left: auto;
+
+    .ic {
+      width: 40px;
+      height: 40px;
+
+      &.ic-status-logo {
+        background-size: 35px !important;
+      }
+    }
+  }
+}
+
+.quick-view__inner {
+}
+
+.quick-view__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  @include responsive1279 {
+    gap: 20px;
+  }
+
+  @include responsive1023 {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.quick-view__left {
+  width: 470px;
+
+  @include responsive1279 {
+    width: 360px;
+  }
+
+  @include responsive1023 {
+    width: 100%;
+  }
+}
+
+.quick-view__right {
+  width: 470px;
+  border-radius: 60px;
+  border: solid 4px $colorBeige;
+  padding: 50px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: $colorGray;
+
+  @include responsive1279 {
+    width: 400px;
+    padding: 30px;
+  }
+
+  @include responsive1023 {
+    width: 100%;
+  }
+
+  @include responsive767 {
+    padding: 20px 10px;
+    border-radius: 40px;
+    border-width: 2px;
+    gap: 10px;
+  }
+}
+
+.quick-view__title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 38px;
+  text-transform: uppercase;
+
+  @include responsive1279 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  @include responsive767 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+
+.quick-view__desc {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 18px;
+
+  @include responsive1279 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include responsive767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.quick-view__wt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  @include responsive1699 {
+    gap: 10px;
+  }
+
+  .quick-view__wt-title {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 18px;
+    white-space: nowrap;
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .quick-view__wt-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    li {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      background-color: $colorGray;
+      border-radius: 30px;
+      color: $colorWhite;
+      padding: 6px 14px;
+      overflow: hidden;
+
+      @include responsive767 {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
+
+      &.active {
+        background-color: $colorOrange;
+        color: $colorWhite;
+      }
+    }
+  }
+}
+
+.quick-view__slider {
+  width: 100%;
+  height: 470px;
+  background-color: $colorBeige;
+  border-radius: 60px;
+  position: relative;
+
+  @include responsive1279 {
+    height: 360px;
+  }
+
+  @include responsive1023 {
+    height: 510px;
+  }
+
+  @include responsive767 {
+    height: 320px;
+    border-radius: 40px;
+  }
+
+  .picture-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    height: 95%;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+
+    @include responsive767 {
+      width: 80%;
+      height: 80%;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .swiperBtnPrev,
+  .swiperBtnNext {
+    width: 27px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    @include responsive767 {
+      width: 20px;
+      height: 30px;
+    }
+  }
+
+  .swiperBtnPrev {
+    left: 20px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='39' viewBox='0 0 23 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M20.8691 1.76782L3.53581 19.1012L20.8691 36.4345' stroke='%23454C52' stroke-width='5'/%3e%3c/svg%3e ");
+
+    @include responsive767 {
+      left: 10px;
+    }
+  }
+
+  .swiperBtnNext {
+    left: auto;
+    right: 20px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='39' viewBox='0 0 23 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.76758 1.76782L19.1009 19.1012L1.76758 36.4345' stroke='%23454C52' stroke-width='5'/%3e%3c/svg%3e ");
+
+    @include responsive767 {
+      right: ƒ 10px;
+    }
+  }
+}
+
+.quick-view__slider--small {
+  margin-top: 20px;
+
+  @include responsive767 {
+    left: -10px;
+    width: calc(100% + 20px);
+    padding: 0 10px;
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    &.swiper-slide-thumb-active {
+      .picture-block {
+        background-color: $colorWhite;
+      }
+    }
+  }
+
+  .picture-block {
+    width: 80px;
+    height: 80px;
+    background-color: $colorBeige;
+    display: flex;
+    border-radius: 20px;
+    transition: all 0.3s;
+    position: relative;
+
+    picture {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      cursor: grab;
+    }
+  }
+}
+
+.quick-view__next,
+.quick-view__prev {
+  width: 80px;
+  height: 80px;
+  background-color: #f1eae2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 9;
+  transition:
+    width 0.3s,
+    background-color 0.3s;
+
+  @include hover {
+    width: 100px;
+    background-color: $colorOrange;
+
+    &::before {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  @include responsive767 {
+    width: 35px;
+    height: 50px;
+  }
+
+  @include before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    transition: filter 0.3s;
+
+    @include responsive767 {
+      background-size: 10px;
+    }
+  }
+}
+
+.quick-view__prev {
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  right: 100%;
+
+  &::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='39' viewBox='0 0 23 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M20.8691 1.76782L3.53581 19.1012L20.8691 36.4345' stroke='%23454C52' stroke-width='5'/%3e%3c/svg%3e ");
+  }
+}
+
+.quick-view__next {
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  left: 100%;
+
+  &::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='39' viewBox='0 0 23 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.76758 1.76782L19.1009 19.1012L1.76758 36.4345' stroke='%23454C52' stroke-width='5'/%3e%3c/svg%3e ");
+  }
+}
+
+#popup-quick {
+  overflow: auto;
+
+  .modal__container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0;
+    overflow: visible;
+
+    @include responsive1699 {
+      max-width: 1020px;
+    }
+
+    @include responsive1279 {
+      max-width: 840px;
+    }
+
+    @include responsive1023 {
+      max-width: 580px;
+    }
+
+    @include responsive767 {
+      max-width: 80%;
+    }
+  }
+
+  .modal__close {
+    transition: all 0.3s;
+    right: -80px;
+    top: 0;
+    width: 29px;
+    height: 80px;
+    background-image: none;
+
+    @include responsive767 {
+      right: 0;
+      top: -60px;
+      width: 80px;
+      height: 100px;
+    }
+
+    @include before {
+      background: #454c5266;
+      backdrop-filter: blur(20px);
+      width: 200px;
+      height: 80px;
+      right: 0;
+      top: 0;
+      border-radius: 80px;
+      z-index: -1;
+
+      @include responsive767 {
+        height: 200px;
+        width: 60px;
+      }
+    }
+
+    @include after {
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M26.6458 1.76782L14.2067 14.2069M14.2067 14.2069L1.76758 1.76782M14.2067 14.2069L26.6458 26.646M14.2067 14.2069L1.76758 26.646' stroke='white' stroke-width='5'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 25px;
+      border-radius: 80px;
+      z-index: 1;
+      top: 50%;
+      right: 20px;
+      transform: translate(-50%, -50%);
+
+      @include responsive767 {
+        right: -10px;
+        transform: initial;
+        top: -10px;
+        background-size: 15px;
+      }
+    }
+  }
+}

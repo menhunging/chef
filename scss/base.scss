@@ -67,6 +67,26 @@ body {
       }
     }
   }
+
+  &.inner-page {
+    .docs-section {
+      padding: 120px 0;
+
+      @include responsive1279 {
+        padding: 80px 0;
+      }
+
+      @include responsive767 {
+        padding: 60px 0;
+      }
+    }
+
+    .faq-section .faq-section__inner:after,
+    .faq-section .faq-section__inner:before {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 
 .container {
@@ -829,34 +849,71 @@ section {
   );
 }
 
-// ----- TODO elдалить потом
+.fancybox__thumbs .carousel__slide > * {
+  background-size: contain;
+}
 
-.swiper-pagination-bullets {
-  bottom: 0 !important;
-  top: auto !important;
-  left: 0;
-  width: auto;
-  position: relative;
+.fancybox__thumbs .carousel__slide .fancybox__thumb::after {
+  border-width: 3px;
+}
+
+.play {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 0;
-  z-index: 5;
+  justify-content: center;
+  transition: all 0.3s;
+  z-index: 9;
 
-  .swiper-pagination-bullet {
-    width: 16px;
-    height: 1px;
-    opacity: 1;
-    border-radius: 0;
-    margin: 0 !important;
-    flex: 1;
-    position: relative;
-    transition: all 0.3s;
-    background-color: rgba(15, 15, 15, 0.2);
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M37.1454 21.25C35.7649 31.4332 26.3907 38.5691 16.2076 37.1886C6.02439 35.8081 -1.11158 26.4339 0.268929 16.2507C1.64943 6.06758 11.0236 -1.06838 21.2068 0.312126C31.39 1.69263 38.5259 11.0668 37.1454 21.25ZM3.21905 16.6507C2.05943 25.2045 8.05363 33.0789 16.6075 34.2385C25.1613 35.3981 33.0357 29.4039 34.1953 20.8501C35.3549 12.2962 29.3607 4.42187 20.8069 3.26225C12.253 2.10262 4.37867 8.09683 3.21905 16.6507Z' fill='white'/%3e%3cpath d='M24.3458 18.3876L16.3223 13.9301C16.0467 13.777 15.708 13.9763 15.708 14.2916V23.2066C15.708 23.5219 16.0467 23.7211 16.3223 23.568L24.3458 19.1105C24.6294 18.953 24.6294 18.5452 24.3458 18.3876Z' fill='white'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    z-index: 9;
   }
 
-  .swiper-pagination-bullet-active {
-    background-color: $colorBlack;
+  @include hover {
+    &::before {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.text-block {
+  font-size: 16px;
+  line-height: 26px;
+
+  @include responsive1699 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @include responsive767 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  p + p {
+    margin-top: 20px;
+  }
+
+  a {
+    text-decoration: underline;
+    transition: text-decoration 0.3s;
+
+    @include hover {
+      text-decoration-color: transparent;
+    }
   }
 }
 
@@ -865,36 +922,135 @@ section {
 
   input {
     width: 100%;
-    height: 65px;
+    height: 81px;
     border: 0;
     background-color: transparent;
-    border-bottom: solid 1px $colorWhite;
-    border-radius: 0;
+    border: solid 4px $colorGray;
+    border-radius: 40px;
     font-size: 24px;
-    padding: 0;
-    color: $colorWhite;
+    line-height: 26px;
+    padding: 0 40px;
+    color: $colorGray;
+    font-weight: 800;
+    transition:
+      border 0.3s,
+      background-color 0.3s;
+
+    @include responsive1699 {
+      font-size: 20px;
+      line-height: 22px;
+      height: 71px;
+      padding: 0 30px;
+    }
 
     @include responsive1023 {
-      font-size: 20px;
+      height: 61px;
+      font-size: 18px;
+      line-height: 20px;
     }
 
     @include responsive767 {
-      height: 45px;
+      font-size: 16px;
+      line-height: 18px;
     }
 
     &::placeholder {
-      text-transform: uppercase;
       opacity: 0.6;
+    }
+
+    &:focus {
+      background-color: $colorWhite;
+      border-color: $colorWhite;
     }
   }
 
   textarea {
+    resize: none;
     width: 100%;
-    height: 112px;
-    background-color: $colorWhite;
-    border-radius: 9px;
+    height: 81px;
     border: 0;
-    padding: 12px 16px;
+    background-color: transparent;
+    border: solid 4px $colorGray;
+    border-radius: 40px;
+    font-size: 24px;
+    line-height: 26px;
+    padding: 24px 40px;
+    color: $colorGray;
+    font-weight: 800;
+    transition:
+      border 0.3s,
+      background-color 0.3s;
+
+    @include responsive1699 {
+      font-size: 20px;
+      line-height: 22px;
+      height: 71px;
+      padding: 20px 30px;
+    }
+
+    @include responsive1023 {
+      height: 61px;
+      font-size: 18px;
+      line-height: 20px;
+      padding: 16px 30px;
+    }
+
+    @include responsive767 {
+      height: 120px;
+      border-radius: 30px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &:focus {
+      background-color: $colorWhite;
+      border-color: $colorWhite;
+    }
+  }
+
+  select {
+    width: 100%;
+    height: 81px;
+    border: 0;
+    background-color: transparent;
+    border: solid 4px $colorGray;
+    border-radius: 40px;
+    font-size: 24px;
+    line-height: 26px;
+    padding: 0 40px;
+    color: $colorGray;
+    font-weight: 800;
+    transition:
+      border 0.3s,
+      background-color 0.3s;
+
+    @include responsive1699 {
+      font-size: 20px;
+      line-height: 22px;
+      height: 71px;
+      padding: 20px 30px;
+    }
+
+    @include responsive1023 {
+      height: 61px;
+      font-size: 18px;
+      line-height: 20px;
+      padding: 0 30px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &:focus {
+      background-color: $colorWhite;
+      border-color: $colorWhite;
+    }
+
+    &::placeholder {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -904,11 +1060,9 @@ section {
 
     &:checked + label {
       &:before {
-        background-color: $colorBlack;
       }
 
       &::after {
-        background-color: $colorBlack;
         opacity: 1;
       }
     }
@@ -928,149 +1082,54 @@ section {
     display: block;
     align-items: center;
     gap: 8px;
-    padding-left: 70px;
-    color: $colorWhite;
+    padding-left: 45px;
+    color: rgba($colorGray, 0.6);
 
-    @include responsive1549 {
+    @include responsive1699 {
       font-size: 14px;
-      line-height: 17px;
-      padding-left: 65px;
+      line-height: 18px;
+      max-width: 80%;
     }
 
-    @include responsive1279 {
+    @include responsive767 {
+      max-width: 100%;
       font-size: 12px;
-    }
-
-    @include responsive1023 {
-      padding-left: 50px;
+      line-height: 14px;
     }
 
     a {
       text-decoration: underline;
-      opacity: 0.3;
-      transition: opacity 0.3s;
+      transition: text-decoration 0.3s;
 
       &:hover {
-        opacity: 1;
+        text-decoration-color: transparent;
       }
     }
 
     @include before {
       left: 0;
       top: 50%;
-      width: 48px;
-      height: 48px;
+      width: 28px;
+      height: 28px;
       border: 0;
-      border-radius: 4px;
+      border-radius: 9px;
       overflow: hidden;
       transform: translateY(-50%);
-      background-color: $colorWhite;
-
-      @include responsive1549 {
-        width: 42px;
-        height: 42px;
-      }
-
-      @include responsive1023 {
-        width: 38px;
-        height: 38px;
-      }
+      border: solid 3px $colorGray;
     }
 
     @include after {
-      background-color: $colorWhite;
       left: 0;
       top: 50%;
-      width: 48px;
-      height: 48px;
+      width: 28px;
+      height: 28px;
       opacity: 0;
-      border-radius: 4px;
+      border-radius: 9px;
       overflow: hidden;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.710938 4.51118L4.83594 8.70166L12.7109 0.70166' stroke='%23454C52' stroke-width='2' stroke-linejoin='round'/%3e%3c/svg%3e ");
       transform: translateY(-50%);
       background-position: center;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='25' viewBox='0 0 35 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 9.5L13.8077 22L33.5 2' stroke='%23EDEADF' stroke-width='4'/%3e%3c/svg%3e ");
       background-repeat: no-repeat;
-
-      @include responsive1549 {
-        width: 42px;
-        height: 42px;
-        background-size: 24px;
-      }
-
-      @include responsive1023 {
-        width: 38px;
-        height: 38px;
-        background-size: 50%;
-      }
     }
   }
 }
-
-.radio-block {
-  position: relative;
-
-  label {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 30px;
-    position: relative;
-    padding-left: 17px;
-    cursor: pointer;
-
-    @include before {
-      left: -10px;
-      top: 2px;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      border: solid 1px $colorBlack;
-
-      @include responsive1549 {
-        top: 0;
-      }
-    }
-
-    @include after {
-      left: -7px;
-      top: 5px;
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background-color: $colorBlack;
-      opacity: 0;
-
-      @include responsive1549 {
-        top: 3px;
-      }
-    }
-
-    @include responsive1549 {
-      font-size: 12px;
-    }
-  }
-
-  input {
-    &:checked {
-      & + ::after {
-        opacity: 1;
-      }
-    }
-  }
-}
-
-.play {
-  cursor: pointer;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='45' height='50' viewBox='0 0 45 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M41.0625 19.8399C45.0347 22.1333 45.0347 27.8667 41.0625 30.1601L9.43749 48.4188C5.46527 50.7121 0.499998 47.8454 0.499998 43.2587L0.499999 6.74129C0.5 2.15456 5.46528 -0.712135 9.4375 1.58123L41.0625 19.8399Z' fill='%23FA4F19'/%3e%3c/svg%3e ");
-  background-position: calc(50% + 5px) center;
-  background-repeat: no-repeat;
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s;
-  z-index: 5;
-}
-
-// TODO /hz mb delete

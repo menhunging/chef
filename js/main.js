@@ -361,6 +361,199 @@ $(document).ready(function () {
     advSliderMediaQuery.addEventListener("change", toggleAdvSwiper);
   }
 
+  if ($(".case-section__slider").length > 0) {
+    let casesSectionSwiper = null;
+
+    const casesSectionSliderMediaQuery = window.matchMedia(
+      "(max-width: 1023px)",
+    );
+
+    const initCasesSectionSwiper = function () {
+      casesSectionSwiper = new Swiper(".case-section__slider", {
+        slidesPerView: 2.25,
+        spaceBetween: 10,
+        pagination: {
+          el: ".case-section__slider .swiper-pagination",
+          type: "progressbar",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 2.1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2.25,
+            spaceBetween: 10,
+          },
+        },
+      });
+    };
+
+    const togglecasesSectionSwiper = function () {
+      if (casesSectionSliderMediaQuery.matches) {
+        if (!casesSectionSwiper) {
+          initCasesSectionSwiper();
+        }
+      } else if (casesSectionSwiper) {
+        casesSectionSwiper.destroy(true, true);
+        casesSectionSwiper = null;
+      }
+    };
+
+    togglecasesSectionSwiper();
+    casesSectionSliderMediaQuery.addEventListener(
+      "change",
+      togglecasesSectionSwiper,
+    );
+  }
+
+  if ($(".quick-view").length > 0) {
+    $(".quick-view").each(function () {
+      const quickView = $(this);
+      const mainSliderEl = quickView.find(".quick-view__slider")[0];
+      const thumbsSliderEl = quickView.find(".quick-view__slider--small")[0];
+
+      let thumbsSwiper = null;
+
+      if (thumbsSliderEl) {
+        thumbsSwiper = new Swiper(thumbsSliderEl, {
+          slidesPerView: "auto",
+          spaceBetween: 10,
+          watchSlidesProgress: true,
+          slideToClickedSlide: true,
+        });
+      }
+
+      const mainSwiperOptions = {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          prevEl: quickView.find(".quick-view__slider .swiperBtnPrev")[0],
+          nextEl: quickView.find(".quick-view__slider .swiperBtnNext")[0],
+        },
+        thumbs: {
+          swiper: thumbsSwiper,
+        },
+      };
+
+      new Swiper(mainSliderEl, mainSwiperOptions);
+    });
+  }
+
+  if ($(".gallery-photo__slider").length > 0) {
+    new Swiper(".gallery-photo__slider", {
+      slidesPerView: 3.5,
+      spaceBetween: 18,
+      pagination: {
+        el: ".gallery-photo__slider .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+        },
+        375: {
+          slidesPerView: 1.4,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 1.8,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 2.4,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2.6,
+          spaceBetween: 10,
+        },
+        1280: {
+          slidesPerView: 3.4,
+          spaceBetween: 18,
+        },
+      },
+    });
+  }
+
+  if ($(".card-block").length > 0) {
+    const thumbsSwiper = new Swiper(".card-block__slider--small", {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      watchSlidesProgress: true,
+      slideToClickedSlide: true,
+    });
+
+    new Swiper(".card-block__slider", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        prevEl: ".card-block__slider .swiperBtnPrev",
+        nextEl: ".card-block__slider .swiperBtnNext",
+      },
+      thumbs: {
+        swiper: thumbsSwiper,
+      },
+    });
+  }
+
+  if ($(".card-block__left").length > 0) {
+    const stickyTopOffset = 20;
+    const stickyMediaQuery = window.matchMedia("(min-width: 1280px)");
+    const stickyBlocks = $(".card-block__left");
+
+    const resetStickyTransforms = function () {
+      stickyBlocks.css("transform", "");
+    };
+
+    const updateStickyLeftBlocks = function () {
+      if (!stickyMediaQuery.matches) {
+        resetStickyTransforms();
+        return;
+      }
+
+      stickyBlocks.each(function () {
+        const stickyBlock = $(this);
+        const stickyElement = stickyBlock[0];
+        const parent = stickyBlock.closest(".card-block__inner");
+
+        if (!parent.length) {
+          stickyBlock.css("transform", "");
+          return;
+        }
+
+        const parentElement = parent[0];
+        const parentRect = parentElement.getBoundingClientRect();
+        const stickyHeight = stickyElement.offsetHeight;
+        const maxTranslateY = Math.max(
+          0,
+          parentElement.offsetHeight - stickyHeight,
+        );
+
+        let translateY = 0;
+
+        if (parentRect.top <= stickyTopOffset) {
+          translateY = stickyTopOffset - parentRect.top;
+        }
+
+        if (translateY > maxTranslateY) {
+          translateY = maxTranslateY;
+        }
+
+        stickyBlock.css("transform", `translateY(${Math.round(translateY)}px)`);
+      });
+    };
+
+    updateStickyLeftBlocks();
+    $(window).on("scroll.cardSticky resize.cardSticky", updateStickyLeftBlocks);
+    stickyMediaQuery.addEventListener("change", updateStickyLeftBlocks);
+  }
+
   if ($(".thisYear").length > 0) {
     let date = new Date();
     $(".thisYear").text(date.getFullYear());
@@ -637,127 +830,175 @@ $(document).ready(function () {
     });
   }
 
-  // TODO удалить потом base
+  if ($(".modal").length > 0) {
+    MicroModal.init({
+      openTrigger: "data-modal",
 
-  // if ($(".grettings-main-slider").length > 0) {
-  //   const swiper = new Swiper(".grettings-main-slider", {
-  //     slidesPerView: 1,
-  //     spaceBetween: 16,
-  //     effect: "fade",
-  //     fadeEffect: { crossFade: true },
-  //     loop: true,
-  //     autoplay: {
-  //       delay: 5000,
-  //       disableOnInteraction: false,
-  //     },
-  //     navigation: {
-  //       prevEl: ".grettings-main-slider .btnSwiperPrev",
-  //       nextEl: ".grettings-main-slider .btnSwiperNext",
-  //     },
-  //     pagination: {
-  //       el: ".swiper-pagination",
-  //     },
-  //     breakpoints: {
-  //       0: {
-  //         slidesPerView: 1,
-  //         spaceBetween: 16,
-  //       },
-  //     },
-  //   });
-  // }
+      onShow: () => {
+        $("body").addClass("modal-open");
+      },
 
-  // if ($(".phone-input").length > 0) {
-  //   $(".phone-input").map(function () {
-  //     $(this).inputmask({
-  //       mask: "+7(999) 999-99-99",
-  //       placeholder: "*",
-  //       showMaskOnHover: false,
-  //       showMaskOnFocus: true,
-  //       clearIncomplete: true,
-  //     });
-  //   });
-  // }
+      onClose: () => {
+        $("body").removeClass("modal-open");
+      },
+    });
 
-  // if ($("[data-fancybox]").length > 0) {
-  //   Fancybox.bind("[data-fancybox]", {
-  //     speedIn: 600,
-  //     speedOut: 600,
-  //   });
-  // }
+    $("[data-modal]").map(function () {
+      $(this).click((e) => e.preventDefault());
+    });
+  }
 
-  // if ($(".subcategories-slider").length > 0) {
-  //   const sliders = document.querySelectorAll(".subcategories-slider");
-  //   let mySwipers = [];
+  if ($("[data-fancybox]").length > 0) {
+    Fancybox.bind("[data-fancybox]", {
+      speedIn: 600,
+      speedOut: 600,
+    });
+  }
 
-  //   function sliderinit() {
-  //     sliders.forEach((slider, index) => {
-  //       let navNext = undefined;
-  //       let navPrev = undefined;
+  if ($(".tabs").length > 0) {
+    $(".tabs").tabslet({
+      mouseevent: "click",
+      attribute: "href",
+      animation: true,
+    });
+  }
 
-  //       if (!slider.swiper) {
-  //         navNext = $(slider)
-  //           .parents(".subcategories")
-  //           .find(".btnSwiperNext")[0];
-  //         navPrev = $(slider)
-  //           .parents(".subcategories")
-  //           .find(".btnSwiperPrev")[0];
+  if ($(".phone-input").length > 0) {
+    const phoneInputs = $(
+      'input.phone-input, input[type="tel"], input[name*="phone" i], input[placeholder*="тел" i], input[placeholder*="phone" i]',
+    );
 
-  //         mySwipers[index] = new Swiper(slider, {
-  //           slidesPerView: 3,
-  //           spaceBetween: 24,
-  //           navigation: {
-  //             nextEl: navNext && navNext,
-  //             prevEl: navPrev && navPrev,
-  //           },
-  //           breakpoints: {
-  //             0: {
-  //               slidesPerView: 1,
-  //               spaceBetween: 16,
-  //             },
-  //             640: {
-  //               slidesPerView: 2,
-  //               spaceBetween: 16,
-  //             },
-  //             1280: {
-  //               slidesPerView: 3,
-  //               spaceBetween: 24,
-  //             },
-  //           },
-  //         });
-  //       } else {
-  //         return;
-  //       }
-  //     });
-  //   }
+    if (phoneInputs.length > 0) {
+      const getDigits = function (value) {
+        return (value || "").replace(/\D/g, "");
+      };
 
-  //   sliders.length && sliderinit();
-  // }
+      const formatRuPhone = function (value) {
+        let digits = getDigits(value);
 
-  // if ($(".tabs").length > 0) {
-  //   $(".tabs").tabslet({
-  //     mouseevent: "click",
-  //     attribute: "href",
-  //     animation: true,
-  //   });
-  // }
+        if (!digits.length) {
+          return "";
+        }
 
-  // if ($(".modal").length > 0) {
-  //   MicroModal.init({
-  //     openTrigger: "data-modal",
+        if (digits[0] === "8") {
+          digits = "7" + digits.slice(1);
+        }
 
-  //     onShow: () => {
-  //       $("body").addClass("modal-open");
-  //     },
+        if (digits[0] !== "7") {
+          digits = "7" + digits;
+        }
 
-  //     onClose: () => {
-  //       $("body").removeClass("modal-open");
-  //     },
-  //   });
+        digits = digits.slice(0, 11);
 
-  //   $("[data-modal]").map(function () {
-  //     $(this).click((e) => e.preventDefault());
-  //   });
-  // }
+        let result = "+7";
 
-  // /base
+        if (digits.length > 1) {
+          result += " (" + digits.slice(1, Math.min(4, digits.length));
+        }
+
+        if (digits.length >= 4) {
+          result += ")";
+        }
+
+        if (digits.length > 4) {
+          result += " " + digits.slice(4, Math.min(7, digits.length));
+        }
+
+        if (digits.length > 7) {
+          result += "-" + digits.slice(7, Math.min(9, digits.length));
+        }
+
+        if (digits.length > 9) {
+          result += "-" + digits.slice(9, 11);
+        }
+
+        return result;
+      };
+
+      const applyPhoneMask = function (input) {
+        input.value = formatRuPhone(input.value);
+      };
+
+      const removeDigitAt = function (value, digitIndex) {
+        let digits = getDigits(value);
+
+        if (digitIndex < 0 || digitIndex >= digits.length) {
+          return formatRuPhone(value);
+        }
+
+        digits = digits.slice(0, digitIndex) + digits.slice(digitIndex + 1);
+
+        if (!digits.length) {
+          return "";
+        }
+
+        return formatRuPhone(digits);
+      };
+
+      phoneInputs.each(function () {
+        $(this).attr({
+          inputmode: "tel",
+          autocomplete: "tel",
+          maxlength: 18,
+        });
+
+        applyPhoneMask(this);
+      });
+
+      phoneInputs.on("focus", function () {
+        if (!this.value.trim()) {
+          this.value = "+7";
+        }
+      });
+
+      phoneInputs.on("keydown", function (e) {
+        if (e.key !== "Backspace" && e.key !== "Delete") {
+          return;
+        }
+
+        const cursorStart = this.selectionStart;
+        const cursorEnd = this.selectionEnd;
+
+        if (
+          cursorStart === null ||
+          cursorEnd === null ||
+          cursorStart !== cursorEnd
+        ) {
+          return;
+        }
+
+        const value = this.value;
+
+        if (
+          e.key === "Backspace" &&
+          cursorStart > 0 &&
+          /\D/.test(value[cursorStart - 1])
+        ) {
+          e.preventDefault();
+          const digitIndex = getDigits(value.slice(0, cursorStart)).length - 1;
+          this.value = removeDigitAt(value, digitIndex);
+        }
+
+        if (
+          e.key === "Delete" &&
+          cursorStart < value.length &&
+          /\D/.test(value[cursorStart])
+        ) {
+          e.preventDefault();
+          const digitIndex = getDigits(value.slice(0, cursorStart)).length;
+          this.value = removeDigitAt(value, digitIndex);
+        }
+      });
+
+      phoneInputs.on("input", function () {
+        applyPhoneMask(this);
+      });
+
+      phoneInputs.on("blur", function () {
+        if (getDigits(this.value).length <= 1) {
+          this.value = "";
+        }
+      });
+    }
+  }
 });

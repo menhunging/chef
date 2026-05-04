@@ -1,0 +1,31 @@
+.gallery-photo {
+}
+
+.gallery-photo__inner {
+}
+
+.gallery-photo-slider {
+  overflow: visible;
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+  }
+}
+
+.gallery-photo__slider {
+  .picture-block {
+    padding-top: calc(334 / 501 * 100%);
+    width: 100%;
+    height: auto;
+    display: flex;
+    border-radius: 60px;
+    overflow: hidden;
+
+    @include responsive1023 {
+      border-radius: 30px;
+    }
+  }
+}

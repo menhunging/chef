@@ -11,6 +11,10 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 6px 48px;
+
+  @include responsive767 {
+    gap: 6px 28px;
+  }
 }
 
 .breadcrumbs li {
@@ -20,6 +24,16 @@
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+
+  @include responsive1279 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include responsive767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
 
   &:not(:last-child) {
     @include after {
@@ -35,12 +49,13 @@
       font-size: 14px;
       line-height: 14px;
       opacity: 0.4;
-    }
-  }
 
-  @include responsive1279 {
-    font-size: 14px;
-    line-height: 16px;
+      @include responsive767 {
+        right: -18px;
+        width: 6px;
+        height: 6px;
+      }
+    }
   }
 }
 
