@@ -1,0 +1,116 @@
+.call-from-manager {
+  background-color: $colorBeige;
+  width: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 60px;
+  margin-top: 120px;
+  padding: 120px 0;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1394' height='760' viewBox='0 0 1394 760' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M582 406C582 630.228 763.772 812 988 812C1212.23 812 1394 630.228 1394 406C1394 181.772 1212.23 0 988 0C763.772 0 582 181.772 582 406ZM1167.57 406C1167.57 505.177 1087.18 585.575 988 585.575C888.823 585.575 808.425 505.177 808.425 406C808.425 306.823 888.823 226.425 988 226.425C1087.18 226.425 1167.57 306.823 1167.57 406Z' fill='%23F1EAE2'/%3e%3ccircle cx='406' cy='406' r='406' transform='matrix(-1 0 0 1 480.5 0)' fill='%23F1EAE2'/%3e%3c/svg%3e ");
+  background-position: left center;
+  background-repeat: no-repeat;
+  max-width: 1920px;
+
+  @include responsive1699 {
+    padding: 100px 30px;
+    margin-top: 100px;
+  }
+
+  @include responsive1279 {
+    padding: 80px 20px;
+    margin-top: 80px;
+  }
+
+  @include responsive1023 {
+    padding: 60px 10px;
+    margin-top: 60px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='355' height='563' viewBox='0 0 355 563' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M177.5 207.083C79.4695 207.083 3.28567e-06 286.552 2.11667e-06 384.583C9.47664e-07 482.613 79.4695 562.083 177.5 562.083C275.531 562.083 355 482.613 355 384.583C355 286.552 275.531 207.083 177.5 207.083ZM177.5 463.091C134.141 463.091 98.9912 427.942 98.9912 384.583C98.9912 341.223 134.141 306.074 177.5 306.074C220.859 306.074 256.009 341.223 256.009 384.583C256.009 427.942 220.859 463.091 177.5 463.091Z' fill='%23F1EAE2'/%3e%3ccircle cx='177.5' cy='177.5' r='177.5' transform='matrix(1.19249e-08 -1 -1 -1.19249e-08 355 162.708)' fill='%23F1EAE2'/%3e%3c/svg%3e ");
+    background-position: top center;
+    border-radius: 30px;
+  }
+
+  @include responsive767 {
+    padding: 30px;
+  }
+
+  @include responsive374 {
+    padding: 20px;
+  }
+
+  .caption {
+    margin-bottom: 60px;
+    display: block;
+
+    @include responsive1279 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .call-from-manager__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px 0;
+
+    @include responsive1279 {
+      gap: 10px 0;
+    }
+
+    .input-item {
+      width: calc(100% / 3 - 20px);
+
+      @include responsive1279 {
+        width: calc(100% / 3 - 10px);
+      }
+
+      @include responsive767 {
+        width: 100%;
+      }
+    }
+
+    .input-item--textarea {
+      width: 100%;
+    }
+
+    .check-block {
+      margin-top: 30px;
+
+      @include responsive1279 {
+        margin-top: 15px;
+      }
+
+      & + .check-block {
+        margin-top: 10px;
+      }
+    }
+
+    .btn {
+      margin-top: 30px;
+      width: 100%;
+      height: 120px;
+      font-size: 36px;
+      line-height: 40px;
+
+      @include responsive1699 {
+        height: 100px;
+      }
+
+      @include responsive1279 {
+        margin-top: 15px;
+        font-size: 30px;
+        line-height: 34px;
+      }
+
+      @include responsive1023 {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      @include responsive767 {
+        height: 80px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+}

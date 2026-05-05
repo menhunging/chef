@@ -139,6 +139,39 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".docs-tabs__catalog").length > 0) {
+    new Swiper(".docs-tabs__catalog", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      pagination: {
+        el: ".docs-tabs__catalog .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 5,
+        },
+        375: {
+          slidesPerView: 2.1,
+          spaceBetween: 7,
+        },
+        768: {
+          slidesPerView: 1.8,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 2.6,
+          spaceBetween: 10,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
   if ($(".events-slider").length > 0) {
     new Swiper(".events-slider", {
       slidesPerView: 2,
@@ -1090,5 +1123,17 @@ $(document).ready(function () {
         }
       });
     }
+  }
+
+  if ($("[data-btn-disabled]").length > 0) {
+    $("[data-btn-disabled]").on("click", function () {
+      console.log("1");
+
+      const formBlock = $(this).parents("form");
+      const btn = formBlock.find("[data-for-disabled]");
+      const isDisabled = btn.prop("disabled");
+
+      btn.prop("disabled", !isDisabled);
+    });
   }
 });

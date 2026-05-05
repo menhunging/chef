@@ -101,6 +101,39 @@
   }
 }
 
+.doc-item__info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+
+  @include responsive767 {
+    gap: 5px;
+    margin-top: -10px;
+  }
+
+  .doc-item__info-type {
+    font-weight: 400;
+
+    @include responsive767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  .doc-item__info-date {
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 0.5;
+
+    @include responsive767 {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+
 .doc-item__link {
   font-weight: 800;
   font-size: 24px;
