@@ -13,11 +13,8 @@
 
   .swiper-slide {
   }
-}
 
-.gallery-photo__slider {
   .picture-block {
-    padding-top: calc(334 / 501 * 100%);
     width: 100%;
     height: auto;
     display: flex;
@@ -27,5 +24,85 @@
     @include responsive1023 {
       border-radius: 30px;
     }
+  }
+}
+
+.gallery-photo__slider {
+  .picture-block {
+    padding-top: calc(334 / 501 * 100%);
+  }
+}
+
+.gallery-photo--small__slider {
+  .picture-block {
+    padding-top: calc(267 / 400 * 100%);
+  }
+}
+
+.gallery-photo--small {
+  background-color: $colorBeige;
+  border-radius: 60px;
+  margin: 200px 10px;
+
+  @include responsive1699 {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 150px 10px;
+  }
+
+  @include responsive1279 {
+    margin: 100px 10px;
+  }
+
+  @include responsive1023 {
+    margin: 80px 10px;
+  }
+
+  @include responsive767 {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+  }
+
+  .section-head {
+    padding: 0;
+    margin-bottom: 60px;
+
+    .caption {
+      max-width: 100%;
+    }
+
+    @include responsive1699 {
+      margin-bottom: 30px;
+    }
+
+    @include responsive767 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.gallery-photo-slider__name {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 30px;
+
+  @include responsive1699 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive1279 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 20px;
   }
 }

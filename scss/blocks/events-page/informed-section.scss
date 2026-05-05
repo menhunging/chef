@@ -1,0 +1,166 @@
+.informed-section {
+  margin: 0 10px;
+  background-color: $colorGreen;
+  border-radius: 60px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1900' height='360' viewBox='0 0 1900 360' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.1' clip-path='url(%23clip0_2822_4230)'%3e%3cpath d='M1690 180C1690 279.411 1770.59 360 1870 360C1969.41 360 2050 279.411 2050 180C2050 80.5887 1969.41 0 1870 0C1770.59 0 1690 80.5887 1690 180ZM1949.61 180C1949.61 223.97 1913.97 259.615 1870 259.615C1826.03 259.615 1790.39 223.97 1790.39 180C1790.39 136.03 1826.03 100.385 1870 100.385C1913.97 100.385 1949.61 136.03 1949.61 180Z' fill='white'/%3e%3ccircle cx='180' cy='180' r='180' transform='matrix(-1 0 0 1 1690 0)' fill='white'/%3e%3cpath d='M970 180C970 279.411 1050.59 360 1150 360C1249.41 360 1330 279.411 1330 180C1330 80.5887 1249.41 0 1150 0C1050.59 0 970 80.5887 970 180ZM1229.61 180C1229.61 223.97 1193.97 259.615 1150 259.615C1106.03 259.615 1070.39 223.97 1070.39 180C1070.39 136.03 1106.03 100.385 1150 100.385C1193.97 100.385 1229.61 136.03 1229.61 180Z' fill='white'/%3e%3ccircle cx='180' cy='180' r='180' transform='matrix(-1 0 0 1 970 0)' fill='white'/%3e%3cpath d='M250 180C250 279.411 330.589 360 430 360C529.411 360 610 279.411 610 180C610 80.5887 529.411 0 430 0C330.589 0 250 80.5887 250 180ZM509.615 180C509.615 223.97 473.97 259.615 430 259.615C386.03 259.615 350.385 223.97 350.385 180C350.385 136.03 386.03 100.385 430 100.385C473.97 100.385 509.615 136.03 509.615 180Z' fill='white'/%3e%3ccircle cx='180' cy='180' r='180' transform='matrix(-1 0 0 1 250 0)' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_2822_4230'%3e%3crect width='2880' height='360' fill='white' transform='matrix(-1 0 0 1 2770 0)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  background-position: center;
+
+  .caption {
+    color: $colorWhite;
+    max-width: 782px;
+    display: block;
+
+    @include responsive1699 {
+      max-width: 500px;
+    }
+
+    @include responsive1279 {
+      max-width: 380px;
+    }
+
+    @include responsive1023 {
+      max-width: 50%;
+      width: 100%;
+    }
+
+    @include responsive767 {
+      max-width: 280px;
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  .input-item {
+    width: 100%;
+    position: relative;
+
+    input {
+      width: 100%;
+      height: 120px;
+      padding-right: 370px;
+      border-color: $colorWhite;
+      color: $colorWhite;
+      border-radius: 60px;
+      font-size: 36px;
+      line-height: 38px;
+
+      @include responsive1699 {
+        font-size: 24px;
+        line-height: 26px;
+        height: 100px;
+        padding-right: 320px;
+      }
+
+      @include responsive1279 {
+        font-size: 20px;
+        line-height: 22px;
+        height: 80px;
+        padding-right: 260px;
+      }
+
+      @include responsive1023 {
+        font-size: 18px;
+        line-height: 20px;
+        height: 60px;
+        padding-right: 200px;
+        padding-left: 15px;
+      }
+
+      @include responsive767 {
+        height: 80px;
+        text-align: center;
+        padding: 0 15px;
+      }
+
+      &:focus {
+        color: $colorGray;
+      }
+    }
+
+    .btn {
+      border-radius: 60px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 365px;
+      font-size: 36px;
+      height: 100%;
+
+      @include responsive1699 {
+        width: 300px;
+        font-size: 24px;
+        line-height: 26px;
+      }
+
+      @include responsive1279 {
+        width: 260px;
+        font-size: 20px;
+        line-height: 22px;
+      }
+
+      @include responsive1023 {
+        width: 200px;
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      @include responsive767 {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      @include hover {
+        background-color: $colorGreen;
+      }
+    }
+  }
+
+  .informed-section__right {
+    max-width: 812px;
+    width: 100%;
+    color: $colorWhite;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+    text-align: right;
+
+    @include responsive1699 {
+      max-width: 720px;
+      gap: 10px;
+    }
+
+    @include responsive1279 {
+      max-width: 520px;
+    }
+
+    @include responsive1023 {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.informed-section__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include responsive1699 {
+    padding: 0 30px;
+  }
+
+  @include responsive1279 {
+    padding: 0 15px;
+  }
+
+  @include responsive1023 {
+    padding: 0 15px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

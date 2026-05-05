@@ -1,0 +1,214 @@
+.events-article {
+  padding: 0;
+}
+
+.events-article__head {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% - 20px);
+  border-radius: 60px;
+  overflow: hidden;
+
+  @include responsive767 {
+    border-radius: 30px;
+  }
+
+  .picture-block {
+    padding-top: calc(731 / 1920 * 100%);
+    width: 100%;
+
+    @include responsive767 {
+      padding-top: calc(136 / 355 * 100%);
+    }
+  }
+}
+
+.events-article__content {
+  max-width: 1100px;
+  margin: 80px auto;
+
+  @include responsive1699 {
+    margin: 60px auto;
+  }
+
+  @include responsive1279 {
+    margin: 50px auto;
+  }
+
+  @include responsive1023 {
+    margin: 40px auto;
+  }
+
+  @include responsive767 {
+    margin: 30px 0;
+  }
+
+  .events-article__date {
+    font-size: 24px;
+    line-height: 20px;
+    color: rgba($colorGray, 0.5);
+    margin-bottom: 40px;
+    display: block;
+    width: 100%;
+
+    @include responsive1699 {
+      font-size: 22px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    @include responsive1279 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include responsive1023 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .date {
+    color: $colorGray;
+    font-weight: 800;
+  }
+
+  ul {
+    margin: 20px 10px;
+
+    li {
+      padding-left: 15px;
+      position: relative;
+
+      @include before {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: rgba($colorGray, 1);
+        left: 0;
+        top: 8px;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 54px;
+    line-height: 56px;
+    margin-bottom: 60px;
+
+    @include responsive1699 {
+      font-size: 42px;
+      line-height: 44px;
+      margin-bottom: 40px;
+    }
+
+    @include responsive1279 {
+      font-size: 32px;
+      line-height: 34px;
+      margin-bottom: 30px;
+    }
+
+    @include responsive1023 {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @include responsive767 {
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+
+    @include responsive639 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 26px;
+
+    @include responsive1549 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include responsive1279 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include responsive1023 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  p {
+    & + p {
+      margin-top: 20px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    transition: text-decoration 0.3s;
+
+    @include hover {
+      text-decoration-color: transparent;
+    }
+  }
+}
+
+.quote-block {
+  border: solid 5px $colorBeige;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  min-height: 178px;
+  display: flex;
+  align-items: center;
+  padding: 60px 55px;
+  border-radius: 60px;
+  margin: 60px auto;
+  width: 100%;
+
+  @include responsive1699 {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 40px 0;
+    padding: 40px;
+  }
+
+  @include responsive1279 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive1023 {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 30px;
+    min-height: initial;
+    border-radius: 30px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 20px 0;
+    padding: 30px;
+  }
+}

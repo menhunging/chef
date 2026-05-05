@@ -176,6 +176,67 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".events-slider--small").length > 0) {
+    const eventsSmallSlider = $(".events-slider--small");
+    const eventsSmallSlidesCount = eventsSmallSlider.find(
+      ".swiper-wrapper > .swiper-slide",
+    ).length;
+    const eventsSmallControls = eventsSmallSlider
+      .closest(".events-section")
+      .find(".swiper-controls");
+
+    const updateEventsSmallControlsVisibility = function () {
+      const shouldHideControls =
+        eventsSmallSlidesCount <= 3 && window.innerWidth >= 1280;
+
+      if (shouldHideControls) {
+        eventsSmallControls.hide();
+      } else {
+        eventsSmallControls.css("display", "");
+      }
+    };
+
+    updateEventsSmallControlsVisibility();
+    $(window)
+      .off("resize.eventsSmallControls")
+      .on("resize.eventsSmallControls", updateEventsSmallControlsVisibility);
+
+    new Swiper(".events-slider--small", {
+      slidesPerView: 3,
+      spaceBetween: 24,
+      navigation: {
+        prevEl: ".events-slider--small .swiperBtnPrev",
+        nextEl: ".events-slider--small .swiperBtnNext",
+      },
+      pagination: {
+        el: ".events-slider--small .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.1,
+          spaceBetween: 5,
+        },
+        375: {
+          slidesPerView: 1.1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
   if ($(".slider-partners-main").length > 0) {
     new Swiper(".slider-partners-main", {
       slidesPerView: 3,
@@ -476,6 +537,35 @@ $(document).ready(function () {
         1280: {
           slidesPerView: 3.4,
           spaceBetween: 18,
+        },
+      },
+    });
+  }
+
+  if ($(".gallery-photo--small__slider").length > 0) {
+    new Swiper(".gallery-photo--small__slider", {
+      slidesPerView: 4.2,
+      spaceBetween: 20,
+      pagination: {
+        el: ".gallery-photo--small__slider .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+          grid: {
+            rows: 2,
+            fill: "row",
+          },
+        },
+        768: {
+          slidesPerView: 3.2,
+          spaceBetween: 10,
+        },
+        1280: {
+          slidesPerView: 4.2,
+          spaceBetween: 20,
         },
       },
     });

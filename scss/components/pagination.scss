@@ -9,6 +9,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @include responsive374 {
+      gap: 5px;
+    }
   }
 
   .pagination__link {

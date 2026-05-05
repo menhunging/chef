@@ -887,6 +887,49 @@ section {
       transform: scale(1.2);
     }
   }
+
+  &.play--orange {
+    transition: all 0s;
+
+    &::before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M59.4327 34C57.2239 50.2931 42.2251 61.7106 25.9321 59.5018C9.63902 57.293 -1.77852 42.2943 0.430286 26.0012C2.63909 9.70814 17.6378 -1.70941 33.9309 0.499401C50.2239 2.70821 61.6415 17.7069 59.4327 34ZM5.15048 26.6411C3.29508 40.3273 12.8858 52.9262 26.572 54.7816C40.2582 56.637 52.8571 47.0463 54.7125 33.3601C56.5679 19.6739 46.9772 7.07499 33.291 5.21959C19.6048 3.3642 7.00588 12.9549 5.15048 26.6411Z' fill='%23FF8B3C'/%3e%3cpath d='M38.9552 29.4202L26.1176 22.2882C25.6767 22.0432 25.1348 22.3621 25.1348 22.8666V37.1305C25.1348 37.635 25.6767 37.9538 26.1176 37.7088L38.9552 30.5769C39.4089 30.3248 39.4089 29.6723 38.9552 29.4202Z' fill='%23FF8B3C'/%3e%3c/svg%3e ");
+    }
+
+    @include after {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#2d2d2d, 0.6);
+      top: 0;
+      left: 0;
+      transition: all 0s;
+      z-index: -1;
+    }
+  }
+
+  .play__time {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: $colorWhite;
+    display: block;
+    transform: translateY(40px);
+
+    @include responsive1699 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include responsive1279 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
 }
 
 .text-block {
@@ -1050,6 +1093,35 @@ section {
 
     &::placeholder {
       opacity: 0.6;
+    }
+  }
+}
+
+.input-item__desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  @include responsive1279 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include responsive1023 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @include responsive767 {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: underline;
+    transition: text-decoration 0.3s;
+
+    @include hover {
+      text-decoration-color: transparent;
     }
   }
 }
