@@ -1,0 +1,204 @@
+.master-classes {
+  background-color: $colorBeige;
+  width: calc(100% - 10px);
+  margin: 0 auto;
+  max-width: 1920px;
+  border-radius: 60px;
+  padding: 120px 0;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1020' height='480' viewBox='0 0 1020 480' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M480 240C480 372.548 372.548 480 240 480C107.452 480 0 372.548 0 240C0 107.452 107.452 0 240 0C372.548 0 480 107.452 480 240ZM133.847 240C133.847 298.626 181.373 346.153 240 346.153C298.626 346.153 346.153 298.626 346.153 240C346.153 181.373 298.626 133.847 240 133.847C181.373 133.847 133.847 181.373 133.847 240Z' fill='%23F1EAE2'/%3e%3ccircle cx='780' cy='240' r='240' fill='%23F1EAE2'/%3e%3c/svg%3e ");
+  background-position: calc(100% + 155px) top;
+  background-repeat: no-repeat;
+
+  @include responsive1699 {
+    padding: 120px 30px;
+  }
+
+  @include responsive1279 {
+    padding: 80px 30px;
+  }
+
+  @include responsive767 {
+    padding: 30px 30px;
+    border-radius: 30px;
+    background-size: 100%;
+    background-position: calc(100% + 100px) top;
+  }
+}
+
+.master-classes__inner {
+}
+
+.master-classes__slider {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  overflow: visible;
+  margin-top: 60px;
+
+  @include responsive1699 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 40px;
+  }
+
+  @include responsive1279 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive1023 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .swiper-wrapper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    background-color: $colorWhite;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .swiper-pagination {
+    background-color: #f1eae2;
+  }
+
+  .picture-block {
+    cursor: pointer;
+    border-radius: 30px;
+    width: 100%;
+    height: 427px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    @include responsive1699 {
+      height: 288px;
+    }
+
+    @include responsive1279 {
+      height: 250px;
+    }
+
+    @include responsive767 {
+      height: auto;
+      padding-top: calc(160 / 305 * 100%);
+    }
+
+    img {
+      transition: transform 0.3s;
+    }
+
+    @include hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .master-classes__time {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    padding: 20px;
+    padding-left: 100px;
+    background-color: rgba(#454c52, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 60px;
+    color: $colorWhite;
+    z-index: 2;
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M59.4327 33.9995C57.2239 50.2926 42.2251 61.7101 25.9321 59.5013C9.63902 57.2925 -1.77852 42.2938 0.430286 26.0007C2.63909 9.70765 17.6378 -1.7099 33.9309 0.498913C50.2239 2.70772 61.6415 17.7065 59.4327 33.9995ZM5.15048 26.6406C3.29508 40.3268 12.8858 52.9257 26.572 54.7811C40.2582 56.6365 52.8571 47.0458 54.7125 33.3596C56.5679 19.6734 46.9772 7.0745 33.291 5.21911C19.6048 3.36371 7.00588 12.9544 5.15048 26.6406Z' fill='%23FF8B3C'/%3e%3cpath d='M38.9533 29.4222L26.1157 22.2902C25.6747 22.0452 25.1328 22.3641 25.1328 22.8685V37.1325C25.1328 37.6369 25.6747 37.9558 26.1157 37.7108L38.9533 30.5788C39.407 30.3268 39.407 29.6742 38.9533 29.4222Z' fill='%23FF8B3C'/%3e%3c/svg%3e ");
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+
+    @include responsive1699 {
+      font-size: 22px;
+      line-height: 24px;
+      background-size: 40px;
+      padding: 20px 20px 20px 70px;
+      min-height: initial;
+    }
+
+    @include responsive1279 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include responsive1023 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 10px;
+      line-height: 12px;
+      background-size: 22px;
+      padding: 13px 13px 13px 45px;
+      background-position: 13px center;
+    }
+  }
+
+  .master-classes__content {
+    padding: 60px;
+    border-radius: 30px;
+
+    @include responsive1699 {
+      padding: 40px;
+    }
+
+    @include responsive1279 {
+      padding: 30px;
+    }
+
+    @include responsive767 {
+      padding: 20px;
+    }
+  }
+
+  .master-classes__title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 38px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 30px;
+
+    @include responsive1699 {
+      font-size: 30px;
+      line-height: 32px;
+      margin-bottom: 20px;
+    }
+
+    @include responsive1279 {
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+    @include responsive1023 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include responsive767 {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+  }
+}

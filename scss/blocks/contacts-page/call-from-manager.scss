@@ -114,3 +114,63 @@
     }
   }
 }
+
+.call-from-manager--green {
+  background-color: $colorGreen;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1394' height='760' viewBox='0 0 1394 760' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.1'%3e%3cpath d='M582 406C582 630.228 763.772 812 988 812C1212.23 812 1394 630.228 1394 406C1394 181.772 1212.23 0 988 0C763.772 0 582 181.772 582 406ZM1167.57 406C1167.57 505.177 1087.18 585.575 988 585.575C888.823 585.575 808.425 505.177 808.425 406C808.425 306.823 888.823 226.425 988 226.425C1087.18 226.425 1167.57 306.823 1167.57 406Z' fill='white'/%3e%3ccircle cx='406' cy='406' r='406' transform='matrix(-1 0 0 1 480.5 0)' fill='white'/%3e%3c/g%3e%3c/svg%3e ");
+
+  @include responsive767 {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='355' height='563' viewBox='0 0 355 563' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.1'%3e%3cpath d='M177.5 207.082C79.4695 207.082 3.28567e-06 286.551 2.11667e-06 384.582C9.47664e-07 482.613 79.4695 562.082 177.5 562.082C275.531 562.082 355 482.613 355 384.582C355 286.551 275.531 207.082 177.5 207.082ZM177.5 463.091C134.141 463.091 98.9912 427.941 98.9912 384.582C98.9912 341.223 134.141 306.073 177.5 306.073C220.859 306.073 256.009 341.223 256.009 384.582C256.009 427.941 220.859 463.091 177.5 463.091Z' fill='white'/%3e%3ccircle cx='177.5' cy='177.5' r='177.5' transform='matrix(1.19249e-08 -1 -1 -1.19249e-08 355 162.707)' fill='white'/%3e%3c/g%3e%3c/svg%3e ");
+  }
+
+  .caption {
+    color: $colorWhite;
+  }
+
+  .call-from-manager__form {
+    .input-item {
+      input {
+        border-color: $colorWhite;
+        color: $colorWhite;
+
+        &:focus {
+          color: $colorGray;
+        }
+      }
+
+      textarea {
+        border-color: $colorWhite;
+        color: $colorWhite;
+
+        &:focus {
+          color: $colorGray;
+        }
+      }
+    }
+
+    .check-block {
+      label {
+        color: $colorWhite;
+
+        &::before {
+          border-color: $colorWhite;
+        }
+
+        &::after {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+
+    .btn {
+      border-color: $colorWhite;
+      background-color: $colorWhite;
+      color: $colorGreen;
+
+      @include hover {
+        background-color: $colorGreen;
+        color: $colorWhite;
+      }
+    }
+  }
+}

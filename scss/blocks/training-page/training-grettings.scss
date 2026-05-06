@@ -1,0 +1,181 @@
+.training-grettings {
+  position: relative;
+  width: calc(100% - 10px);
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 60px;
+  overflow: hidden;
+  max-width: 1920px;
+  margin-top: -98px;
+  z-index: 1;
+
+  @include responsive1279 {
+    margin-top: -80px;
+  }
+
+  @include responsive767 {
+    border-radius: 30px;
+  }
+
+  .caption {
+    color: $colorWhite;
+    max-width: 565px;
+    width: 100%;
+    display: block;
+
+    @include responsive1279 {
+      max-width: 480px;
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &.aos-animate {
+    .training-gretting-block__inner {
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.training-gretting-block__inner {
+  min-height: 860px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 120px 0;
+  z-index: 2;
+  position: relative;
+
+  @include responsive1699 {
+    min-height: 600px;
+    padding: 100px 40px;
+  }
+
+  @include responsive1279 {
+    padding: 100px 30px 40px;
+    min-height: 500px;
+  }
+
+  @include responsive767 {
+    min-height: 400px;
+    padding: 80px 20px 30px;
+  }
+
+  @include before {
+    width: 150%;
+    height: 100%;
+    top: 0;
+    left: -50px;
+    background-color: $colorBlack;
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  @include after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='950' height='860' viewBox='0 0 950 860' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='0.3' d='M950 385C950 647.335 737.335 860 475 860C212.665 860 0 647.335 0 385C0 122.665 212.665 -90 475 -90C737.335 -90 950 122.665 950 385ZM264.906 385C264.906 501.032 358.968 595.094 475 595.094C591.032 595.094 685.094 501.032 685.094 385C685.094 268.968 591.032 174.906 475 174.906C358.968 174.906 264.906 268.968 264.906 385Z' fill='white'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 950px;
+    height: 950px;
+    top: -363px;
+    left: calc(50% + 145px);
+    z-index: 2;
+    pointer-events: none;
+    transform: scale(1.05);
+    transition: transform 2.5s ease-in-out;
+
+    @include responsive1699 {
+      width: 700px;
+      height: 700px;
+      top: -263px;
+      left: calc(50% + 85px);
+      background-size: contain;
+    }
+
+    @include responsive1279 {
+      width: 550px;
+      height: 550px;
+      top: -203px;
+      left: calc(50% + 83px);
+    }
+
+    @include responsive767 {
+      display: none;
+    }
+  }
+}
+
+.training-gretting-block__text {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  max-width: 540px;
+  width: 100%;
+  color: $colorWhite;
+  position: relative;
+  z-index: 2;
+
+  @include responsive1699 {
+    font-size: 22px;
+    line-height: 24px;
+    max-width: 420px;
+  }
+
+  @include responsive1279 {
+    font-size: 20px;
+    line-height: 22px;
+    max-width: 340px;
+  }
+
+  @include responsive1023 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 12px;
+    line-height: 14px;
+    max-width: 211px;
+  }
+
+  @include before {
+    width: 1086px;
+    height: 1086px;
+    top: -184px;
+    right: -184px;
+    background-color: $colorGreen;
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+
+    @include responsive1699 {
+      width: 724px;
+      height: 724px;
+      top: -92px;
+      right: -134px;
+    }
+
+    @include responsive1279 {
+      width: 650px;
+      height: 500px;
+      top: -73px;
+      right: -134px;
+    }
+
+    @include responsive767 {
+      width: 327px;
+      height: 327px;
+      right: -30px;
+    }
+  }
+}

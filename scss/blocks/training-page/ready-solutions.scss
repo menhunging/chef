@@ -1,0 +1,173 @@
+.ready-solutions {
+  padding: 200px 0;
+
+  @include responsive1699 {
+    padding: 120px 0;
+  }
+
+  @include responsive767 {
+    padding: 80px 0;
+  }
+}
+
+.ready-solutions__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px 20px;
+  margin-top: 60px;
+
+  @include responsive1699 {
+    gap: 30px 20px;
+    margin-top: 40px;
+  }
+
+  @include responsive1279 {
+    gap: 25px 20px;
+  }
+
+  @include responsive1023 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 15px;
+    margin-top: 20px;
+  }
+
+  @include responsive767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ready-solutions__item {
+  .picture-block {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    @include responsive1699 {
+      height: 260px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+
+    @include responsive1023 {
+    }
+
+    @include responsive767 {
+      border-radius: 30px;
+      margin-bottom: 15px;
+      height: auto;
+      padding-top: calc(237 / 355 * 100%);
+    }
+  }
+
+  .ready-solutions__time {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: $colorBlack-a3;
+    color: $colorWhite;
+    padding: 15px 24px;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='26' viewBox='0 0 24 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M22.1 23.4C22.1 18.33 18.46 14.04 13.65 13.26V12.74C18.46 11.96 22.1 7.67 22.1 2.6C22.88 2.6 23.4 1.95 23.4 1.3C23.4 0.65 22.88 0 22.1 0H1.3C0.65 0 0 0.65 0 1.3C0 1.95 0.65 2.6 1.3 2.6C1.3 7.67 4.94 11.96 9.75 12.74V13.13C4.94 14.04 1.3 18.33 1.3 23.4C0.65 23.4 0 24.05 0 24.7C0 25.35 0.65 26 1.3 26H22.1C22.88 26 23.4 25.35 23.4 24.7C23.4 24.05 22.88 23.4 22.1 23.4ZM5.85 7.8C4.68 6.37 3.9 4.55 3.9 2.6H19.5C19.5 4.55 18.72 6.37 17.55 7.8H5.85ZM6.5 19.5C7.67 17.94 9.62 16.9 11.7 16.9C13.78 16.9 15.73 17.94 16.9 19.5H6.5Z' fill='white'/%3e%3c/svg%3e ");
+    background-position: 25px center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    padding-left: 60px;
+
+    @include responsive1699 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include responsive1279 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include responsive1023 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+      padding: 11px 18px;
+      padding-left: 40px;
+      background-size: 15px;
+      background-position: 15px center;
+    }
+  }
+
+  .ready-solutions__name {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    @include responsive1699 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include responsive1279 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include responsive1023 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  .ready-solutions__link-download {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    color: $colorOrange;
+    padding-left: 40px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 2V22M18 22L8 12M18 22L28 12' stroke='%23FF8B3C' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M32 25V33H4V25' stroke='%23FF8B3C' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    margin-top: 15px;
+    display: flex;
+    @include text-decoration-hover($colorOrange);
+
+    @include responsive1699 {
+      font-size: 22px;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+
+    @include responsive1279 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include responsive1023 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 16px;
+      padding-left: 25px;
+    }
+  }
+}

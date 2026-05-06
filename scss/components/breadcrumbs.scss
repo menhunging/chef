@@ -1,5 +1,7 @@
 .breadcrumbs-block {
   padding: 40px 0;
+  position: relative;
+  z-index: 2;
 
   @include responsive1279 {
     padding: 20px 0;

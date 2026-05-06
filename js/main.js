@@ -139,6 +139,35 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".master-classes__slider").length > 0) {
+    new Swiper(".master-classes__slider", {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      pagination: {
+        el: ".master-classes__slider .swiper-pagination",
+        type: "progressbar",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2.1,
+          spaceBetween: 10,
+        },
+        1280: {
+          slidesPerView: 2.2,
+          spaceBetween: 20,
+        },
+        1440: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
   if ($(".docs-tabs__catalog").length > 0) {
     new Swiper(".docs-tabs__catalog", {
       slidesPerView: 3,
