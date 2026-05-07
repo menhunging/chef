@@ -1,0 +1,181 @@
+.equipment-section {
+}
+
+.equipment-section__inner {
+  display: grid;
+  grid-template-columns: 680px 1fr;
+  gap: 21px;
+  min-height: 547px;
+
+  @include responsive1699 {
+    min-height: 350px;
+    grid-template-columns: 480px 1fr;
+  }
+
+  @include responsive1279 {
+    gap: 15px;
+  }
+
+  @include responsive1023 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.equipment-section__left {
+  background-color: #2d2d2d;
+  border-radius: 60px;
+  color: $colorWhite;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  padding: 120px 64px;
+
+  @include responsive1699 {
+    padding: 60px 32px;
+  }
+
+  @include responsive1023 {
+    padding: 30px;
+    min-height: 256px;
+    border-radius: 30px;
+  }
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='365' height='174' viewBox='0 0 365 174' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M191.748 86.6258C191.748 134.468 230.532 173.252 278.374 173.252C326.216 173.252 365 134.468 365 86.6258C365 38.7837 326.216 0 278.374 0C230.532 0 191.748 38.7837 191.748 86.6258ZM316.689 86.6258C316.689 107.787 299.535 124.941 278.374 124.941C257.213 124.941 240.059 107.787 240.059 86.6258C240.059 65.4651 257.213 48.311 278.374 48.311C299.535 48.311 316.689 65.4651 316.689 86.6258Z' fill='%23FF8B3C'/%3e%3ccircle cx='86.6258' cy='86.6258' r='86.6258' transform='matrix(-1 0 0 1 173.25 0)' fill='%23FF8B3C'/%3e%3c/svg%3e ");
+    background-position: 64px bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+
+    @include responsive1699 {
+      background-position: 32px bottom;
+      background-size: 60%;
+    }
+
+    @include responsive1023 {
+      background-size: 30%;
+    }
+
+    @include responsive767 {
+      background-size: 50%;
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      background-color: $colorBlack-a6;
+      z-index: 2;
+    }
+  }
+
+  .equipment-section__title {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 38px;
+    text-transform: uppercase;
+    display: block;
+
+    @include responsive1699 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @include responsive1023 {
+      font-size: 24px;
+      line-height: 26px;
+      max-width: 50%;
+    }
+
+    @include responsive767 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive374 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}
+
+.equipment-section__right {
+  background-color: $colorGreen;
+  border-radius: 60px;
+  color: $colorWhite;
+  padding: 122px 140px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='142' height='301' viewBox='0 0 142 301' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_2822_8525)'%3e%3cpath d='M71.0285 142.705C110.436 142.705 142.381 110.76 142.381 71.3527C142.381 31.9457 110.436 -4.84146e-06 71.0285 -3.11893e-06C31.6215 -1.39639e-06 -0.324217 31.9457 -0.324216 71.3527C-0.324214 110.76 31.6215 142.705 71.0285 142.705ZM71.0285 39.7932C88.4583 39.7932 102.588 53.9229 102.588 71.3527C102.588 88.7825 88.4583 102.912 71.0285 102.912C53.5987 102.912 39.469 88.7825 39.469 71.3527C39.469 53.9229 53.5987 39.7932 71.0285 39.7932Z' fill='white'/%3e%3ccircle cx='71.3527' cy='71.3527' r='71.3527' transform='matrix(4.37114e-08 1 1 -4.37114e-08 -0.324219 156.961)' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_2822_8525'%3e%3crect width='142' height='301' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  background-position: right center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include responsive1699 {
+    padding: 60px 132px 60px 32px;
+    background-size: 15%;
+  }
+
+  @include responsive1023 {
+    padding: 30px;
+    border-radius: 30px;
+    gap: 10px;
+    padding-right: 120px;
+    background-size: 10%;
+  }
+
+  @include responsive767 {
+    padding: 30px;
+    background-image: none;
+  }
+}
+
+.equipment-section__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 40px;
+  display: block;
+
+  @include responsive1699 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  @include responsive1279 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+
+  @include responsive374 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

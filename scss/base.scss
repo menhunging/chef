@@ -86,6 +86,11 @@ body {
       transform: translateX(0);
       opacity: 1;
     }
+
+    .master-classes {
+      background-image: none;
+      background-color: transparent;
+    }
   }
 
   &.training-page {
@@ -1327,5 +1332,52 @@ section {
       background-position: center;
       background-repeat: no-repeat;
     }
+  }
+}
+
+.langBlock {
+  @include responsive1279 {
+    display: none;
+  }
+
+  .langBlock__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    li {
+      a {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: $colorGray;
+        transition: color 0.3s;
+
+        @include responsive1279 {
+          font-size: 14px;
+          line-height: 16px;
+        }
+
+        &.active {
+          color: $colorOrange;
+        }
+
+        @include hover {
+          color: $colorOrange;
+        }
+      }
+    }
+  }
+}
+
+.langBlock--mobile {
+  display: none;
+
+  @include responsive1279 {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
   }
 }

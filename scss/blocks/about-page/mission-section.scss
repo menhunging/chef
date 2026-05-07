@@ -1,0 +1,144 @@
+.mission-section {
+}
+.mission-section__head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+
+  @include responsive1699 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    gap: 40px;
+  }
+
+  @include responsive1279 {
+    font-size: 20px;
+    line-height: 22px;
+    gap: 30px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    gap: 20px;
+  }
+
+  @include responsive374 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.mission-section__body {
+  margin-top: 80px;
+
+  @include responsive1699 {
+    margin-top: 60px;
+  }
+
+  @include responsive1279 {
+    margin-top: 40px;
+  }
+}
+
+.mission-section__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 72px;
+
+  @include responsive1699 {
+    gap: 50px;
+  }
+
+  @include responsive1279 {
+    gap: 30px;
+  }
+
+  @include responsive1023 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+
+  @include responsive767 {
+    gap: 40px 10px;
+  }
+}
+
+.mission-section__item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+
+  @include responsive1279 {
+    gap: 10px;
+  }
+
+  .picture-block {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 30px;
+
+    @include responsive1699 {
+      width: 160px;
+      height: 160px;
+      margin-bottom: 15px;
+    }
+
+    @include responsive1279 {
+      width: 140px;
+      height: 140px;
+    }
+
+    @include responsive767 {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 10px;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.mission-section__title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 38px;
+  text-transform: uppercase;
+  display: block;
+
+  @include responsive1699 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  @include responsive1023 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  @include responsive767 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive374 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

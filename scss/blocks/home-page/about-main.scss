@@ -364,24 +364,6 @@
     height: 152px;
   }
 
-  .about-main-circle__anim {
-    position: absolute;
-    width: 225px;
-    height: 225px;
-    transform-origin: center;
-    animation: aboutMainCircleSpin 16s linear infinite;
-    font-weight: 600;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-
-    svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
   .about-main-circle__age {
     font-weight: 900;
     font-size: 80px;
@@ -537,6 +519,24 @@
       top: -168px;
       left: 20px;
     }
+  }
+}
+
+.about-main-circle__anim {
+  position: absolute;
+  width: 225px;
+  height: 225px;
+  transform-origin: center;
+  animation: aboutMainCircleSpin 16s linear infinite;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 }
 

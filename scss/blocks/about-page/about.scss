@@ -1,0 +1,688 @@
+.about-info {
+  position: relative;
+  padding-top: 200px;
+
+  @include responsive1699 {
+    padding-top: 150px;
+  }
+
+  @include responsive1279 {
+    padding-top: 100px;
+  }
+
+  @include responsive767 {
+    padding-top: 80px;
+  }
+
+  @include before {
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1329' height='3969' viewBox='0 0 1329 3969' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 664.5C0 1031.49 297.507 1329 664.5 1329C1031.49 1329 1329 1031.49 1329 664.5C1329 297.507 1031.49 0 664.5 0C297.507 0 0 297.507 0 664.5ZM958.41 664.5C958.41 826.822 826.822 958.41 664.5 958.41C502.178 958.41 370.59 826.822 370.59 664.5C370.59 502.178 502.178 370.59 664.5 370.59C826.822 370.59 958.41 502.178 958.41 664.5Z' fill='%23F7F4F1'/%3e%3ccircle opacity='0.7' cx='323.5' cy='323.5' r='323.5' transform='matrix(-1 0 0 1 987 1654)' fill='%23F7F4F1'/%3e%3cpath opacity='0.7' d='M0 3304.5C0 3671.49 297.507 3969 664.5 3969C1031.49 3969 1329 3671.49 1329 3304.5C1329 2937.51 1031.49 2640 664.5 2640C297.507 2640 0 2937.51 0 3304.5ZM958.41 3304.5C958.41 3466.82 826.822 3598.41 664.5 3598.41C502.178 3598.41 370.59 3466.82 370.59 3304.5C370.59 3142.18 502.178 3010.59 664.5 3010.59C826.822 3010.59 958.41 3142.18 958.41 3304.5Z' fill='%23F7F4F1'/%3e%3c/svg%3e ");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -205px;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    @include responsive1699 {
+      top: -149px;
+    }
+
+    @include responsive1279 {
+      top: -159px;
+    }
+
+    @include responsive1023 {
+      top: -235px;
+    }
+    @include responsive767 {
+      display: none;
+    }
+  }
+
+  .caption {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.about-info__list {
+  margin-top: 160px;
+  position: relative;
+
+  @include responsive1699 {
+    margin-top: 100px;
+  }
+
+  @include responsive1279 {
+    margin-top: 80px;
+  }
+
+  @include responsive1023 {
+    margin-top: 40px;
+  }
+
+  @include after {
+    width: 4px;
+    background-color: $colorOrange;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    margin-left: -2px;
+
+    @include responsive767 {
+      left: 9px;
+      width: 2px;
+      margin-left: 0;
+    }
+  }
+}
+
+.about-info__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  @include responsive767 {
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding-left: 30px;
+  }
+
+  @include before {
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 50%;
+    margin-left: -20px;
+    border-radius: 50%;
+    background-color: $colorOrange;
+
+    @include responsive1279 {
+      width: 30px;
+      height: 30px;
+      margin-left: -15px;
+    }
+
+    @include responsive767 {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      left: 0;
+    }
+  }
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+    text-align: right;
+
+    @include responsive767 {
+      flex-direction: column-reverse;
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .picture-block {
+      width: 680px;
+      height: 540px;
+
+      @include responsive1699 {
+        width: 540px;
+        height: 420px;
+      }
+
+      @include responsive1279 {
+        width: 420px;
+        height: 320px;
+      }
+
+      @include responsive1023 {
+        width: 360px;
+        height: 280px;
+      }
+
+      @include responsive767 {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .about-info__content {
+      align-items: flex-end;
+      width: 680px;
+
+      @include responsive1699 {
+        width: 520px;
+      }
+
+      @include responsive1279 {
+        width: 420px;
+      }
+
+      @include responsive1023 {
+        width: 340px;
+      }
+
+      @include responsive767 {
+        width: 100%;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  & + .about-info__item {
+    margin-top: 200px;
+
+    @include responsive1699 {
+      margin-top: 150px;
+    }
+
+    @include responsive1279 {
+      margin-top: 100px;
+    }
+
+    @include responsive767 {
+      margin-top: 60px;
+    }
+  }
+
+  .picture-block {
+    width: 680px;
+    height: 380px;
+    border-radius: 60px;
+    overflow: hidden;
+
+    @include responsive1699 {
+      width: 540px;
+      height: 420px;
+    }
+
+    @include responsive1279 {
+      width: 420px;
+      height: 320px;
+    }
+
+    @include responsive1023 {
+      width: 360px;
+      height: 280px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      height: auto;
+      padding-top: calc(180 / 325 * 100%);
+      border-radius: 30px;
+    }
+  }
+
+  .about-info__content {
+    width: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include responsive1699 {
+      width: 520px;
+    }
+
+    @include responsive1279 {
+      width: 420px;
+    }
+
+    @include responsive1023 {
+      width: 345px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      gap: 10px;
+    }
+
+    p {
+      max-width: 540px;
+
+      @include responsive1699 {
+        max-width: 480px;
+      }
+
+      @include responsive1279 {
+        max-width: 420px;
+      }
+    }
+  }
+
+  .about-info__title {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 38px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 50px;
+    max-width: 490px;
+
+    @include responsive1699 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @include responsive1023 {
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 20px;
+      line-height: 22px;
+      margin-bottom: 0;
+    }
+
+    @include responsive374 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  .about-info__description {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 26px;
+    text-transform: uppercase;
+    display: block;
+    display: block;
+
+    @include responsive1699 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include responsive1279 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @include responsive374 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+.about-grettings {
+  position: relative;
+
+  &.aos-animate {
+    &::before {
+      margin-left: 0;
+    }
+
+    &::after {
+      margin-right: 0;
+    }
+
+    .about-main-circle {
+    }
+
+    .about-grettings__logo-img {
+      transform: scale(1);
+    }
+  }
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='622' height='293' viewBox='0 0 622 293' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_2822_8743)'%3e%3cpath d='M292.73 146.342C292.73 65.5195 227.21 0.000183105 146.388 0.000183105C65.5662 0.000183105 0.046875 65.5195 0.046875 146.342C0.046875 227.164 65.5662 292.683 146.388 292.683C227.21 292.683 292.73 227.164 292.73 146.342ZM81.6611 146.342C81.6611 110.594 110.64 81.6144 146.388 81.6144C182.136 81.6144 211.116 110.594 211.116 146.342C211.116 182.09 182.136 211.069 146.388 211.069C110.64 211.069 81.6611 182.09 81.6611 146.342Z' fill='%23F7F4F1'/%3e%3ccircle cx='146.341' cy='146.341' r='146.341' transform='matrix(1 0 0 -1 329.316 292.683)' fill='%23F7F4F1'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_2822_8743'%3e%3crect width='622' height='292.683' fill='white' transform='matrix(1 0 0 -1 0 292.683)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+    background-position: center;
+    width: 622px;
+    height: 292px;
+    left: -120px;
+    top: calc(50% - 120px);
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    margin-left: -500px;
+    transition: margin-left 1.5s;
+
+    @include responsive1699 {
+      left: -80px;
+      width: 400px;
+      height: 195px;
+      top: calc(50% - 80px);
+    }
+
+    @include responsive1279 {
+      left: -40px;
+      width: 300px;
+      height: 145px;
+      top: calc(50% - 100px);
+    }
+
+    @include responsive1023 {
+      left: -130px;
+      top: calc(50% - 110px);
+    }
+
+    @include responsive767 {
+      display: none;
+    }
+  }
+
+  @include after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='622' height='293' viewBox='0 0 622 293' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_2822_8743)'%3e%3cpath d='M292.73 146.342C292.73 65.5195 227.21 0.000183105 146.388 0.000183105C65.5662 0.000183105 0.046875 65.5195 0.046875 146.342C0.046875 227.164 65.5662 292.683 146.388 292.683C227.21 292.683 292.73 227.164 292.73 146.342ZM81.6611 146.342C81.6611 110.594 110.64 81.6144 146.388 81.6144C182.136 81.6144 211.116 110.594 211.116 146.342C211.116 182.09 182.136 211.069 146.388 211.069C110.64 211.069 81.6611 182.09 81.6611 146.342Z' fill='%23F7F4F1'/%3e%3ccircle cx='146.341' cy='146.341' r='146.341' transform='matrix(1 0 0 -1 329.316 292.683)' fill='%23F7F4F1'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_2822_8743'%3e%3crect width='622' height='292.683' fill='white' transform='matrix(1 0 0 -1 0 292.683)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+    background-position: center;
+    width: 622px;
+    height: 292px;
+    transform: scale(-1, 1) translateY(-50%);
+    right: -120px;
+    top: calc(50% - 120px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    margin-right: -500px;
+    transition: margin-right 1.5s;
+
+    @include responsive1699 {
+      width: 400px;
+      height: 195px;
+      top: calc(50% - 80px);
+    }
+
+    @include responsive1279 {
+      width: 300px;
+      height: 145px;
+      top: calc(50% - 100px);
+      right: -40px;
+    }
+
+    @include responsive1023 {
+      right: -130px;
+      top: calc(50% - 110px);
+    }
+
+    @include responsive767 {
+      display: none;
+    }
+  }
+
+  .about-main-circle {
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: calc(50% - 430px);
+
+    @include responsive1023 {
+      right: calc(50% - 330px);
+    }
+
+    @include responsive767 {
+      right: calc(50% - 131px);
+      top: auto;
+      bottom: -150px;
+    }
+  }
+
+  .about-main-circle__wrapper {
+    border: 0;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.about-grettings__inner {
+  position: relative;
+  min-height: 820px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -170px;
+
+  @include responsive1699 {
+    min-height: 600px;
+  }
+
+  @include responsive1279 {
+    min-height: 530px;
+    margin-top: -50px;
+    margin-bottom: -170px;
+  }
+
+  @include responsive1023 {
+    min-height: 550px;
+    margin-top: -50px;
+    margin-bottom: -80px;
+  }
+
+  @include responsive767 {
+    min-height: 380px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .about-grettings__logo {
+    @include responsive1699 {
+    }
+  }
+
+  .about-grettings__logo-img {
+    width: 555px;
+    height: 555px;
+    margin: auto;
+    transform: scale(0);
+    transition: transform 1.5s;
+
+    @include responsive1699 {
+      width: 450px;
+      height: 450px;
+    }
+
+    @include responsive1279 {
+      width: 350px;
+      height: 350px;
+    }
+
+    @include responsive1023 {
+      width: 300px;
+      height: 300px;
+    }
+
+    @include responsive767 {
+      width: 242px;
+      height: 242px;
+    }
+
+    @include before {
+      background-image: url("../img/back-about-logo.png");
+      background-image: image-set(
+        url("../img/back-about-logo.webp") type("image/webp"),
+        url("../img/back-about-logo.png") type("image/png")
+      );
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 811px;
+      height: 811px;
+      top: -158px;
+      left: -134px;
+      transform-origin: center;
+      animation: aboutLogoSpin 24s linear infinite;
+
+      @include responsive1699 {
+        width: 600px;
+        height: 600px;
+        top: -108px;
+        left: -81px;
+      }
+
+      @include responsive1279 {
+        width: 460px;
+        height: 460px;
+        top: -79px;
+        left: -55px;
+      }
+
+      @include responsive1023 {
+        width: 400px;
+        height: 400px;
+        top: -70px;
+        left: -50px;
+      }
+
+      @include responsive767 {
+        width: 355px;
+        height: 355px;
+        top: -71px;
+        left: -58px;
+      }
+    }
+  }
+}
+
+.about-grettings__title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 38px;
+  text-transform: uppercase;
+  display: block;
+  max-width: 348px;
+
+  @include responsive1699 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  @include responsive1023 {
+    font-size: 24px;
+    line-height: 26px;
+    max-width: 280px;
+  }
+
+  @include responsive767 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive374 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.about-grettings__text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  display: block;
+  text-align: right;
+  max-width: 410px;
+
+  @include responsive1699 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  @include responsive1279 {
+    font-size: 20px;
+    line-height: 22px;
+    max-width: 320px;
+  }
+
+  @include responsive767 {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  @include responsive374 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.about-grettings__bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include responsive767 {
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 100px;
+  }
+
+  .controls {
+    width: 100%;
+    margin-top: 90px;
+
+    @include responsive1279 {
+      margin-top: 60px;
+    }
+
+    @include responsive767 {
+      margin-top: 40px;
+    }
+
+    @include responsive1023 {
+      margin-top: 30px;
+    }
+
+    @include responsive767 {
+      margin-top: 0;
+    }
+  }
+
+  .btn {
+    font-size: 36px;
+    line-height: 38px;
+    height: 120px;
+
+    @include responsive1699 {
+      font-size: 32px;
+      line-height: 34px;
+      height: 100px;
+    }
+
+    @include responsive1279 {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @include responsive1023 {
+      font-size: 24px;
+      line-height: 26px;
+      height: 80px;
+    }
+
+    @include responsive767 {
+      font-size: 20px;
+      line-height: 22px;
+      height: 80px;
+    }
+  }
+}
+
+@keyframes aboutLogoSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

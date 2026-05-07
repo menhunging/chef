@@ -210,3 +210,163 @@
     line-height: 20px;
   }
 }
+
+.docs-section--about {
+  .doc-item__name {
+    font-size: 24px;
+    line-height: 26px;
+
+    @include responsive1549 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include responsive1279 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include responsive1023 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}
+
+.docs-section__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include responsive1023 {
+    flex-direction: column;
+  }
+
+  .caption {
+    max-width: 480px;
+
+    @include responsive1699 {
+      max-width: 360px;
+    }
+
+    @include responsive1023 {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  & + * {
+    margin-top: 80px;
+
+    @include responsive1699 {
+      margin-top: 60px;
+    }
+
+    @include responsive1279 {
+      margin-top: 40px;
+    }
+
+    @include responsive767 {
+      margin-top: 30px;
+    }
+  }
+}
+
+.docs-section__head-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 60px 120px;
+  padding-left: 230px;
+  background-color: $colorBeige;
+  border-radius: 140px;
+  position: relative;
+  width: 867px;
+
+  @include responsive1699 {
+    padding: 40px 100px;
+    padding-left: 180px;
+    width: 710px;
+  }
+
+  @include responsive1279 {
+    padding: 30px 80px;
+    padding-left: 140px;
+    width: 600px;
+  }
+
+  @include responsive1023 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 30px;
+    width: 100%;
+  }
+
+  .picture-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 189px;
+    height: 240px;
+
+    @include responsive1699 {
+      width: 150px;
+      height: 180px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include responsive1279 {
+      width: 120px;
+      height: 150px;
+    }
+
+    @include responsive1023 {
+      position: relative;
+      width: 100px;
+      height: 120px;
+      top: auto;
+      transform: initial;
+    }
+
+    @include responsive767 {
+      width: 80px;
+      height: 100px;
+      left: -20px;
+    }
+
+    img {
+      @include responsive1023 {
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.docs-section__head-content-title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  @include responsive1699 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include responsive1279 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  strong {
+    color: $colorOrange;
+  }
+}

@@ -98,6 +98,120 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".stages-production__list").length > 0) {
+    $(".stages-production__list").each(function (listIndex) {
+      const stagesList = $(this);
+      const stageItems = stagesList.find("li");
+      const stagesSection =
+        stagesList.closest(".stages-production")[0] || stagesList[0];
+
+      let activeIndex = 0;
+      let stepTimer = null;
+      let hasStarted = false;
+
+      stageItems.removeClass("active");
+      stagesList.removeClass("is-progress-running");
+
+      const startStagesAnimation = function () {
+        if (hasStarted) {
+          return;
+        }
+
+        hasStarted = true;
+        stagesList.addClass("is-progress-running");
+
+        const progressDurationRaw =
+          getComputedStyle(stagesList[0]).getPropertyValue(
+            "--stagesProgressDuration",
+          ) || "";
+        const progressDurationSeconds =
+          parseFloat(progressDurationRaw.trim()) || 5;
+        const progressDurationMs = progressDurationSeconds * 1000;
+        const stepsCount = stageItems.length;
+        const stepDelay =
+          stepsCount > 1 ? progressDurationMs / (stepsCount - 1) : 0;
+
+        stageItems.eq(0).addClass("active");
+        activeIndex = 1;
+
+        if (activeIndex >= stepsCount) {
+          return;
+        }
+
+        stepTimer = setInterval(function () {
+          stageItems.eq(activeIndex).addClass("active");
+          activeIndex += 1;
+
+          if (activeIndex >= stepsCount) {
+            clearInterval(stepTimer);
+            stepTimer = null;
+          }
+        }, stepDelay);
+      };
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          function (entries, currentObserver) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                startStagesAnimation();
+                currentObserver.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.35,
+          },
+        );
+
+        observer.observe(stagesSection);
+      } else {
+        const eventNamespace = `.stagesProduction${listIndex}`;
+        const fallbackStart = function () {
+          const rect = stagesSection.getBoundingClientRect();
+
+          if (rect.top <= window.innerHeight * 0.75) {
+            startStagesAnimation();
+            $(window).off(`scroll${eventNamespace} resize${eventNamespace}`);
+          }
+        };
+
+        $(window).on(
+          `scroll${eventNamespace} resize${eventNamespace}`,
+          fallbackStart,
+        );
+        fallbackStart();
+      }
+    });
+  }
+
+  if ($(".video").length > 0) {
+    $(".video").each(function () {
+      const videoWrapper = $(this);
+      const videoElement = videoWrapper.find("video").get(0);
+      const playButton = videoWrapper.find(".video__play");
+
+      if (!videoElement || !playButton.length) {
+        return;
+      }
+
+      playButton.on("click", function () {
+        const playPromise = videoElement.play();
+        playButton.hide();
+
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(function () {
+            playButton.show();
+          });
+        }
+      });
+
+      $(videoElement).on("ended", function () {
+        playButton.show();
+      });
+    });
+  }
+
   if ($(".docs-slider").length > 0) {
     new Swiper(".docs-slider", {
       slidesPerView: 3,
