@@ -242,6 +242,20 @@
       line-height: 26px;
     }
   }
+
+  @include responsive767 {
+    .picture-block {
+      background-color: $colorOrange;
+    }
+
+    .catalog-main-page__item-name {
+      color: $colorOrange;
+    }
+
+    .icon-catalog-main-page {
+      opacity: 0.3;
+    }
+  }
 }
 
 .icon-catalog-main {

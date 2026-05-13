@@ -494,17 +494,19 @@
                     <div class="informed-section__inner">
                         <span class="caption caption--h3">Будь в курсе новостей и событий «СУ-шеф»</span>
 
-                        <div class="informed-section__right">
+                        <form action="" class="informed-section__right">
                             <div class="input-item">
                                 <input type="email" placeholder="Ваш e-mail">
-                                <a href="#" class="btn btn--white-full">Подписаться</a>
+                                <button class="btn btn--white-full" disabled data-for-disabled>Подписаться</button>
                             </div>
 
-                            <span class="input-item__desc">Нажимая кнопку, вы соглашаетесь с <a href="#">Политикой
-                                    конфиденциальности</a></span>
-                        </div>
-
-
+                            <div class="check-block">
+                                <input type="checkbox" id="check-2">
+                                <label for="check-2" data-btn-disabled>Нажимая кнопку, вы соглашаетесь с <a
+                                        href="#">Политикой
+                                        конфиденциальности</a></label>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

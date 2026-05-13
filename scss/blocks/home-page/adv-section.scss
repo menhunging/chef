@@ -185,8 +185,8 @@
   transform: rotateY(0deg);
   backface-visibility: hidden;
   transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
+    transform 1s ease,
+    opacity 1s ease;
 
   @include responsive1699 {
     padding: 30px 40px;
@@ -233,8 +233,8 @@
   backface-visibility: hidden;
   pointer-events: none;
   transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
+    transform 1s ease,
+    opacity 1s ease;
   overflow: hidden;
 
   @include responsive1699 {

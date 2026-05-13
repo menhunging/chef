@@ -429,10 +429,17 @@
     background-image: none;
 
     @include responsive767 {
-      right: 0;
-      top: -60px;
-      width: 80px;
-      height: 100px;
+      right: -26px;
+      top: 20px;
+      height: 32px;
+      width: 32px;
+    }
+
+    @include responsive374 {
+      right: -16px;
+      top: 20px;
+      height: 22px;
+      width: 22px;
     }
 
     @include before {
@@ -446,8 +453,7 @@
       z-index: -1;
 
       @include responsive767 {
-        height: 200px;
-        width: 60px;
+        display: none;
       }
     }
 

@@ -730,10 +730,6 @@ $(document).ready(function () {
         0: {
           slidesPerView: 1.2,
           spaceBetween: 10,
-          grid: {
-            rows: 2,
-            fill: "row",
-          },
         },
         768: {
           slidesPerView: 3.2,

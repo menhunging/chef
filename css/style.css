@@ -2462,6 +2462,7 @@ h4,
   padding: 60px 0;
   width: 100%;
   position: relative;
+  z-index: 5;
 }
 @media (max-width: 1699px) {
   .header {
@@ -5862,7 +5863,7 @@ h4,
   z-index: 2;
   transform: rotateY(0deg);
   backface-visibility: hidden;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 1s ease, opacity 1s ease;
 }
 @media (max-width: 1699px) {
   .adv-item__front {
@@ -5911,7 +5912,7 @@ h4,
   transform: rotateY(-180deg);
   backface-visibility: hidden;
   pointer-events: none;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 1s ease, opacity 1s ease;
   overflow: hidden;
 }
 @media (max-width: 1699px) {
@@ -8032,6 +8033,17 @@ h4,
     line-height: 26px;
   }
 }
+@media (max-width: 767px) {
+  .catalog-main-page__item .picture-block {
+    background-color: #ff8b3c;
+  }
+  .catalog-main-page__item .catalog-main-page__item-name {
+    color: #ff8b3c;
+  }
+  .catalog-main-page__item .icon-catalog-main-page {
+    opacity: 0.3;
+  }
+}
 
 .icon-catalog-main {
   position: absolute;
@@ -8902,10 +8914,18 @@ h4,
 }
 @media (max-width: 767px) {
   #popup-quick .modal__close {
-    right: 0;
-    top: -60px;
-    width: 80px;
-    height: 100px;
+    right: -26px;
+    top: 20px;
+    height: 32px;
+    width: 32px;
+  }
+}
+@media (max-width: 374px) {
+  #popup-quick .modal__close {
+    right: -16px;
+    top: 20px;
+    height: 22px;
+    width: 22px;
   }
 }
 #popup-quick .modal__close::before {
@@ -8923,8 +8943,7 @@ h4,
 }
 @media (max-width: 767px) {
   #popup-quick .modal__close::before {
-    height: 200px;
-    width: 60px;
+    display: none;
   }
 }
 #popup-quick .modal__close::after {
@@ -10354,6 +10373,15 @@ h4,
     max-width: 100%;
     width: 100%;
   }
+}
+.informed-section .check-block {
+  filter: brightness(0) invert(1);
+  text-align: left;
+  margin-top: 10px;
+}
+.informed-section .check-block label {
+  color: rgb(69, 76, 82);
+  max-width: 100%;
 }
 
 .informed-section__inner {
@@ -13129,6 +13157,7 @@ h4,
   .about-grettings__inner .about-grettings__logo-img {
     width: 300px;
     height: 300px;
+    transform: initial;
   }
 }
 @media (max-width: 767px) {
